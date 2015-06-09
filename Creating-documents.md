@@ -62,4 +62,4 @@ During processing we're leaving several files for each created page. Normally, a
 
 And that is it.
 
-**Note:** by default, `Cleaner` never touches processed documents. If that is not what you want, you can specify your implementation of `UnreferencedSourcesProvider` in `ScanbotSDKInitializer`
+**Note:** by default, `Cleaner` never touches processed documents themselves. If that is not what you want, you can specify your implementation of `UnreferencedSourcesProvider` in `ScanbotSDKInitializer`
