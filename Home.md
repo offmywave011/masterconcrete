@@ -1,1 +1,1 @@
-Welcome to the Scanbot-SDK-Examples wiki!
+Scanbot SDK brings scanning and document creation capabilities of Scanbot to your app.
