@@ -53,3 +53,13 @@ Now, when we have our `documentDrafts` creating the documents is as simple as:
 `DocumentProcessing` will do all the processing and write the documents to the filesystem. You can use `DocumentProcessingResult.getDocumentFile()` to open the file afterwards.
 
 **Note:** `processDocument` is blocking, CPU and memory intensive operation, so you should not call it from application's main thread. Our recommended practice is to perform processing in `IntentService`, so processing won't be stopped when user will leave your app.
+
+## Clean up
+
+During processing we're leaving several files for each created page. Normally, after processing we don't need them anymore, so we must do clean up. To help you with this, we have `Cleaner` class. Just call it after processing:
+
+    cleaner.cleanup();
+
+And that is it.
+
+**Note:** by default, `Cleaner` never touches processed documents. If that is not what you want, you can specify your implementation of `UnreferencedSourcesProvider` in `ScanbotSDKInitializer`
