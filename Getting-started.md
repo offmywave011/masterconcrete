@@ -39,6 +39,8 @@ Scanbot SDK uses dependency injection to facilitate quick and flexible developme
 
         @Inject
         private DocumentProcessor documentProcessor;
+        @Inject
+        private Cleaner cleaner;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
