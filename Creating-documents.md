@@ -35,3 +35,21 @@ This will launch snapping screen where user will be able to take scans, crop/rot
 
         // Now we are ready to start processing
     }
+
+Each `DocumentDraft` represents a template for a new document. But document itself is not created yet - each draft should be processed by `DocumentProcessor` before you'll get actual files.
+
+**Note:** you don't have to start processing instantly. For instance, you can persist `DocumentDraft` and perform processing at some point in future.
+
+## Processing
+
+Now, when we have our `documentDrafts` creating the documents is as simple as:
+
+    for (DocumentDraft draft : documentDrafts) {
+        DocumentProcessingResult result = documentProcessor.processDocument(draft);
+
+        // handle the result, such as result.getDocumentFile()
+    }
+
+`DocumentProcessing` will do all the processing and write the documents to the filesystem. You can use `DocumentProcessingResult.getDocumentFile()` to open the file afterwards.
+
+**Note:** `processDocument` is blocking, CPU and memory intensive operation, so you should not call it from application's main thread. Our recommended practice is to perform processing in `IntentService`, so processing won't be stopped when user will leave your app.
