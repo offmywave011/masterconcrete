@@ -1,1 +1,3 @@
 Scanbot SDK brings scanning and document creation capabilities of Scanbot to your app.
+
+[[Getting started]]
