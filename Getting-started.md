@@ -31,6 +31,8 @@ Add the following line with license key inside of your `<application>` tag in `A
 
     </application>
 
+Please, make sure that you inserted the key as it is in the license file - with all line breaks.
+
 ## Initialize SDK
 
 Scanbot SDK must be initialized before usage. Add following line to your `Application` class:
