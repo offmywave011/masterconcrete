@@ -19,6 +19,18 @@ Afterwards, you can add dependency to your project:
 
     compile 'io.scanbot:sdk-package-1:1.0.0-3'
 
+## Add license to AndroidManifest
+
+Add the following line with license key inside of your `<application>` tag in `AndroidManifest.xml`:
+
+    <application ...>
+
+        <meta-data android:name="SCANBOT_SDK_LICENSE_KEY" android:value="Insert your key here" />
+
+        ...
+
+    </application>
+
 ## Initialize SDK
 
 Scanbot SDK must be initialized before usage. Add following line to your `Application` class:
