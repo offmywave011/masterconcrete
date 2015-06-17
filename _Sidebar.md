@@ -2,3 +2,4 @@
 * [[Creating documents]]
 * [[Customizing themes]]
 * [[Output format]]
+* [[OCR document scanning]]
