@@ -1,8 +1,10 @@
-# OCR document scanning
-
 For document text recognition you have to follow next steps: 
 
-1. OCR feature is provided in the Scanbot SDK package 2. You have to add `compile 'io.scanbot:sdk-package-2:1.0.0-3'` to your Gradle dependencies.
+1. OCR feature is provided in the Scanbot SDK package 2. You have to add 
+
+    `compile 'io.scanbot:sdk-package-2:1.0.0-3'`
+
+    to your Gradle dependencies.
 
 2. SDK requires specific training data for text recognition for every language which it recognizes. You have to add url to AndroidManifest.xml for downloading OCR data.
 
