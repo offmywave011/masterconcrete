@@ -3,3 +3,4 @@
 * [[Customizing themes]]
 * [[Output format]]
 * [[OCR document scanning]]
+* [[Upload to Cloud Storages]]
