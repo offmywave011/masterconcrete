@@ -1,5 +1,6 @@
 * [[Getting started]]
 * [[Creating documents]]
+    * [[Advanced: Using a SnappingFragment]]
 * [[Customizing themes]]
 * [[Output format]]
 * [[OCR document scanning]]
