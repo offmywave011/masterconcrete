@@ -1,46 +1,45 @@
-For document text recognition you have to follow next steps: 
+## Setting up project
 
-1. OCR feature is provided in the Scanbot SDK package 2. You have to add 
+OCR feature is provided in the Scanbot SDK package 2. You have to add following dependency:
 
-    `compile 'io.scanbot:sdk-package-2:1.0.0-3'`
+    compile 'io.scanbot:sdk-package-2:1.1.0'
 
-    to your Gradle dependencies.
+OCR module requires training data for text recognition for every language which it uses (you can decide on which languages to use). You have to add url to AndroidManifest.xml for downloading OCR data.
 
-2. SDK requires specific training data for text recognition for every language which it recognizes. You have to add url to AndroidManifest.xml for downloading OCR data.
+    <meta-data android:name="ocr_blobs_path" android:value="Insert path here" />
 
-    `<meta-data android:name="ocr_blobs_path" android:value="Insert path here" />`
+As for now, you have 2 options:
 
-    * You can download training data from the Scanbot server - replace value with `http://download.scanbot.io/di/tessdata/`. (preferred)
+* Download training data from the Scanbot server - replace value with `http://download.scanbot.io/di/tessdata/`. (preferred)
 
-    * Or you can put an OCR data in the application assets directory - replace value with a path to the folder in the assets directory `your_ocr_folder_name_in_assets/`.
+* Put an OCR data in the application assets directory - replace value with a path to the folder in the assets directory `folder_with_traineddata/`. You can get trained data files from Tesseract website: https://code.google.com/p/tesseract-ocr/downloads/list
 
-3. Add `DocumentProcessor`, `BlobFactory` and `BlobManager` injects:
+## Preparing the data
 
-    `@Inject`
+Inject `DocumentProcessor`, `BlobFactory` and `BlobManager` dependencies:
 
-    `private DocumentProcessor documentProcessor;`
-
-    `@Inject`
-
-    `private BlobManager blobManager;`
-
-    `@Inject`
-
-    `private BlobFactory blobFactory;` 
+    @Inject
+    private DocumentProcessor documentProcessor;
+    @Inject
+    private BlobManager blobManager;
+    @Inject
+    private BlobFactory blobFactory;
  
-    Get OCR data blobs for the language you want to perform OCR, e.g. english:
+Get OCR blobs for the language you want to perform OCR on, e.g. english:
     
-    `blobFactory.ocrLanguageBlobs(Language.ENG)`
+    blobFactory.ocrLanguageBlobs(Language.ENG)
 
-    This method will return a collection of `Blob` instances, which have to be downloaded. Call `blobManager.fetch(blob, false);` for all of them. You have to call `fetch(blob, false)` even for `Blob`s in assets. All training data files will be cached in internal application folder. 
+This method will return a collection of `Blob` instances which required for OCR. All of them need to be fetched either from server or from assets. Call `blobManager.fetch(blob, false);` to do that. All training data files will be cached in internal application folder.
 
-4. When all required blobs will be downloaded, you can start `DocumentDraft` processing in `DocumentProcessor`. It will execute text recognition and compose PDF file with the recognized text in it.
-    * For all `DocumentDraft`s set OCR status `OcrStatus.PENDING`.
+## Recognizing text
+
+When all required blobs will be downloaded, you can create documents using `DocumentProcessor`. It will do text recognition and compose PDF file with the recognized text in it.
+
+There is one difference though. You need to explicitly specify in `DocumentDraft` that OCR is desired. To do so, you have to set proper OCR status:
     
-    `draft.getDocument().setOcrStatus(OcrStatus.PENDING);`
+    draft.getDocument().setOcrStatus(OcrStatus.PENDING);
    
-    * Call `documentProcessor.processDocument(draft)` in `DocumentProcessor`.
-    * As a result `DocumentProcessor` returns a `DocumentProcessingResult` that contains generated `Document` object. You can call `documentProcessingResult.getDocument().getOcrText()` and will get a recognized text.
+As a result `DocumentProcessor` returns a `DocumentProcessingResult` that contains generated `Document` object. You can call `documentProcessingResult.getDocument().getOcrText()` and will get a recognized text.
 
 `DocumentProcessor` supports several OCR statuses that you can set to `DocumentDraft`:
 * `OcrStatus.PENDING` - OCR well be performed only if a preference PreferencesConstants.PERFORM_OCR is true and PreferencesConstants.OCR_ONLY_WHILE_CHARGING is false (or true and the device is charging).
