@@ -39,3 +39,5 @@ Your activity have to implement `ScanbotCameraFragment.PictureTakenListener` int
             //now you can save and start picture processing here (e.g. applying filters, cropping)
         }
     }
+
+`byte[] image` - full size not cropped raw image from camera.
