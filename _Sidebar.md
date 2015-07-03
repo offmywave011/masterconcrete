@@ -2,6 +2,7 @@
 * [[Creating documents]]
     * [[Advanced: Using a SnappingFragment]]
     * [[Advanced: Detection and Filters]]
+    * [[Advanced: Using a ScanbotCameraFragment]]
 * [[Customizing themes]]
 * [[Output format]]
 * [[OCR document scanning]]
