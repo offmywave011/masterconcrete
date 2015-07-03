@@ -29,7 +29,7 @@ Inside your `onCreate` method in `Activity`, call this:
 
 #### Handling the result
 
-Instead of receiving the result via `onActivityResult` or a broadcast your activity have to implement `ScanbotCameraFragment.PictureTakenListener` interface. You will get an image byte array and image orientation as `onPictureTaken` method parameters. They are a result of camera snap or image selection from Gallery:
+Your activity have to implement `ScanbotCameraFragment.PictureTakenListener` interface. You will get an image byte array and image orientation as `onPictureTaken(byte[] image, int imageOrientation)` method parameters. They are the result of camera snap or image selection from Gallery:
 
     public class ExampleActivity extends RoboActionBarActivity implements ScanbotCameraFragment.PictureTakenListener     
     {
