@@ -1,4 +1,4 @@
-If you want to use only camera functionality without ViewPager, color filters or page cropping you can embed `ScanbotCameraFragment` into your `Activity`.
+If you want to use only camera functionality without ViewPager, color filters or page cropping you can just embed `ScanbotCameraFragment` into your `Activity`.
 
 However, there are some extra steps which you need to take:
 
