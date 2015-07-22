@@ -2,7 +2,7 @@
 
 OCR feature is provided in the Scanbot SDK package 2. You have to add following dependency:
 
-    compile 'io.scanbot:sdk-package-2:1.1.0'
+    compile "io.scanbot:sdk-package-2:$latestVersion"
 
 OCR module requires training data for text recognition for every language which it uses (you can decide on which languages to use). You have to add url to AndroidManifest.xml for downloading OCR data.
 
