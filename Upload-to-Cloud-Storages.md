@@ -2,7 +2,7 @@ For document uploading follow next steps:
 
 1. Upload to Cloud Storages is provided in the full Scanbot SDK package. You have to add 
 
-    `compile 'io.scanbot:sdk-package-full:1.0.0-3'`
+    compile "io.scanbot:sdk-package-full:$latestVersion"
 
     to your Gradle dependencies.
 
