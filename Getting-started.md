@@ -17,7 +17,9 @@ Scanbot SDK is distributed through our private repository which you should speci
 
 Afterwards, you can add dependency to your project:
 
-    compile 'io.scanbot:sdk-package-1:1.0.0-3'
+    compile "io.scanbot:sdk-package-1:$latestVersion"
+
+See latest version in [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
 
 ## Add license to AndroidManifest
 
