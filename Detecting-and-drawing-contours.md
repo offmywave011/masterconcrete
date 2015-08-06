@@ -28,3 +28,37 @@ At his point contour detection becomes active. Now, all we have to do is listen 
         }
 
     });
+
+#### Drawing detected contour
+
+To draw detected contour use `PolygonView`. First, add it as sub-view of `ScanbotCameraView`:
+
+    <net.doo.snap.camera.ScanbotCameraView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <net.doo.snap.ui.PolygonView
+            android:id="@+id/polygonView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:polygonStrokeWidth="8dp"
+            app:polygonStrokeColor="#ffffff"
+            app:polygonFillColor="#00ff00"/>
+
+    </net.doo.snap.camera.ScanbotCameraView>
+
+Second, `PolygonView` should receive callbacks from `ContourDetectorFrameHandler`:
+
+    PolygonView polygonView = (PolygonView) findViewById(R.id.polygonView);
+    frameHandler.addResultHandler(polygonView);
+
+Done. If you'll start the app, polygon will be drawn on the screen.
+
+#### Customizing drawn polygon
+
+`PolygonView` supports following attributes (which you can add in XML, as shown in example above):
+
+* `polygonStrokeWidth` - width (thickness) of polygon lines
+* `polygonStrokeColor` - color of polygon lines
+* `polygonFillColor` - fill color of polygon
