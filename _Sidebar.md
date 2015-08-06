@@ -4,6 +4,7 @@
     * [[Advanced: Detection and Filters]]
     * [[Advanced: Using a ScanbotCameraFragment]]
 * [[Using ScanbotCameraView]]
+    * [[Detecting and drawing contours]]
 * [[Customizing themes]]
 * [[Output format]]
 * [[OCR document scanning]]
