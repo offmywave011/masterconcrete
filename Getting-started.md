@@ -44,5 +44,3 @@ Scanbot SDK must be initialized before usage. Add following line to your `Applic
         new ScanbotSDKInitializer().initialize(this);
         super.onCreate();
     }
-
-This is the most basic set-up which will work out of the box. However, `ScanbotSDKInitializer` have more options which you might want to adjust to change appearance or behavior of your app. They're all documented, so feel free to experiment.
