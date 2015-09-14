@@ -16,14 +16,11 @@ As for now, you have 2 options:
 
 ## Preparing the data
 
-Inject `DocumentProcessor`, `BlobFactory` and `BlobManager` dependencies:
+Use `DocumentProcessor`, `BlobFactory` and `BlobManager` dependencies:
 
-    @Inject
-    private DocumentProcessor documentProcessor;
-    @Inject
-    private BlobManager blobManager;
-    @Inject
-    private BlobFactory blobFactory;
+    DocumentProcessor documentProcessor = scanbotSDK.documentProcessor();
+    BlobManager blobManager = scanbotSDK.blobManager();
+    BlobFactory blobFactory = scanbotSDK.blobFactory();
  
 Get OCR blobs for the language you want to perform OCR on, e.g. english:
     
