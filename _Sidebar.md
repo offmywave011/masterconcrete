@@ -2,6 +2,7 @@
 * [[Using ScanbotCameraView]]
     * [[Detecting and drawing contours]]
     * [[Handling contour detection results]]
+* [[Using EditPolygonImageView]]
 * [[Creating documents]]
     * [[Advanced: Detection and Filters]]
 * [[Output format]]
