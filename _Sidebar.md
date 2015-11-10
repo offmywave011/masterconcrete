@@ -4,7 +4,7 @@
     * [[Handling contour detection results]]
 * [[Using EditPolygonImageView]]
 * [[Creating documents]]
-    * [[Using ImageQualityOptimizer]]
+    * [[Optimizing image size]]
     * [[Advanced: Detection and Filters]]
 * [[Output format]]
 * [[OCR document scanning]]
