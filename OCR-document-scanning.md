@@ -4,6 +4,11 @@ OCR feature is provided in the Scanbot SDK package 2. You have to add following 
 
     compile "io.scanbot:sdk-package-2:$latestVersion"
 
+Then, add those permissions to your AndroidManifest.xml
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 OCR module requires training data for text recognition for every language which it uses (you can decide on which languages to use). You have to add url to AndroidManifest.xml for downloading OCR data.
 
     <meta-data android:name="ocr_blobs_path" android:value="Insert path here" />
