@@ -13,6 +13,11 @@ Document creation workflow:
 
 #### Step 0 - Set up
 
+Add those permissions to your AndroidManifest.xml
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 Create `ScanbotSDK` object in your `Activity` or `Service`:
 
     private ScanbotSDK scanbotSDK;
