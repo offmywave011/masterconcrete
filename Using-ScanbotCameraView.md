@@ -2,16 +2,20 @@ Android camera API might be very tricky and far from being developer-friendly (i
 
 #### Getting started
 
-`ScanbotCameraView` is available with SDK Package 1. To get started with it you have to do 2 steps.
+`ScanbotCameraView` is available with SDK Package 1. To get started with it you have to do 3 steps.
 
-First. Add it to your layout, which is as simple as:
+First. Add permission to AndroidManifest.xml
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+Second. Add it to your layout, which is as simple as:
 
     <net.doo.snap.camera.ScanbotCameraView
             android:id="@+id/camera"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-Second. Delegate `onResume` and `onPause` methods of your `Activity` (or `Fragment`, whatever you are using) to `ScanbotCameraView`:
+Third. Delegate `onResume` and `onPause` methods of your `Activity` (or `Fragment`, whatever you are using) to `ScanbotCameraView`:
 
     public class MyActivity extends Activity {
 
