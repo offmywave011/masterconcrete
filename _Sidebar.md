@@ -8,3 +8,4 @@
     * [[Advanced: Detection and Filters]]
 * [[Output format]]
 * [[OCR document scanning]]
+* [[Permissions]]
