@@ -9,3 +9,4 @@
 * [[Output format]]
 * [[OCR document scanning]]
 * [[Permissions]]
+* [[ProGuard]]
