@@ -2,7 +2,11 @@ With SDK Package 1 you have a possibility to select which permissions to use in 
 
     android.permission.CAMERA
 
-This permission is used for the camera views.
+This permission is used for the camera views. 
+
+Additionally, if you're using camera, you need to declare it as a used feature in your manifest:
+
+    <uses-feature android:name="android.hardware.camera" />
 
 ---
 
