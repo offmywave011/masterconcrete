@@ -8,10 +8,10 @@ Scanbot SDK is distributed through our private repository which you should speci
         jcenter()
 
         maven {
-            url 'http://nexus.doo.net/nexus/content/repositories/releases/'
+            url 'http://nexus.scanbot.io/nexus/content/repositories/releases/'
         }
         maven {
-            url 'http://nexus.doo.net/nexus/content/repositories/snapshots/'
+            url 'http://nexus.scanbot.io/nexus/content/repositories/snapshots/'
         }
     }
 
