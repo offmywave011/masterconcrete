@@ -21,9 +21,8 @@ As for now, you have 2 options:
 
 ## Preparing the data
 
-Use `DocumentProcessor`, `BlobFactory` and `BlobManager` dependencies:
+Use `BlobFactory` and `BlobManager` dependencies:
 
-    DocumentProcessor documentProcessor = scanbotSDK.documentProcessor();
     BlobManager blobManager = scanbotSDK.blobManager();
     BlobFactory blobFactory = scanbotSDK.blobFactory();
  
@@ -35,15 +34,19 @@ This method will return a collection of `Blob` instances which required for OCR.
 
 ## Recognizing text
 
-When all required blobs will be downloaded, you can create documents using `DocumentProcessor`. It will do text recognition and compose PDF file with the recognized text in it.
+When all required blobs will be downloaded, you can create documents using `TextRecognition`. It will do text recognition and compose PDF file as an option. `TextRecognition` must be created for each text recognition session.
 
-There is one difference though. You need to explicitly specify in `DocumentDraft` that OCR is desired. To do so, you have to set proper OCR status:
-    
-    draft.getDocument().setOcrStatus(OcrStatus.PENDING);
-   
-As a result `DocumentProcessor` returns a `DocumentProcessingResult` that contains generated `Document` object. You can call `documentProcessingResult.getDocument().getOcrText()` and will get a recognized text.
+To perform recognition with composed PDF use:
 
-`DocumentProcessor` supports several OCR statuses that you can set to `DocumentDraft`:
-* `OcrStatus.PENDING` - OCR well be performed only if a preference PreferencesConstants.PERFORM_OCR is true and PreferencesConstants.OCR_ONLY_WHILE_CHARGING is false (or true and the device is charging).
-* `OcrStatus.PENDING_FORCED` - OCR will be performed. Ignores all preferences flags.
-* `OcrStatus.PENDING_ON_CHARGER` - OCR will be performed only if device is charging. Ignores all preferences flags. 
+    scanbotSDK.textRecognition().withPDF(Language defaultLanguage, Document document, List<Page> pages);
+
+Where:
+* `defaultLanguage` to perform recognition with. Use it to skip part with language detection and only if you are sure with what language recognition should be preformed. Can be null.
+* `document` into which composed PDF will be written.
+* `pages` to perform OCR on.
+
+It returns `OcrResult` which consists from recognized text and composed PDF.
+
+To get just recognized text use:
+
+    scanbotSDK.textRecognition().withoutPDF(Language defaultLanguage, List<Page> pages);
