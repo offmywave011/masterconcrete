@@ -1,6 +1,7 @@
 * [[Getting started]]
 * [[Using ScanbotCameraView]]
     * [[Detecting and drawing contours]]
+    * [[Autosnapping]]
     * [[Handling contour detection results]]
 * [[Using EditPolygonImageView]]
 * [[Creating documents]]
