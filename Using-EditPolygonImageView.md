@@ -35,24 +35,9 @@ Third. `EditPolygonImageView` supports magnifying lens feature. To enable it you
 
 Custom parameters `app:magnifierCrossSize`, `app:magnifierCrossStrokeWidth`, `app:magnifierStrokeWidth`, `app:magnifierRadius`, `app:magnifierMargin` and `app:editPolygonMagnifier` are optional.
 
-Also, you should set up `MagnifierView` every time when editPolygonView is set with new image:
+**Important** - you should set up `MagnifierView` every time when editPolygonView is set with new image:
 
     magnifierView.setupMagnifier(editPolygonView);
-
-And your `Activity` have to implement `DrawMagnifierListener`:
-
-    public class MainActivity extends AppCompatActivity implements DrawMagnifierListener {
-        
-        @Override
-        public void drawMagnifier(PointF zoomPoint) {
-            magnifierView.drawMagnifier(zoomPoint);
-        }
-    
-        @Override
-        public void eraseMagnifier() {
-            magnifierView.eraseMagnifier();
-        }
-    }
 
 If you want to get selected polygon from `EditPolygonImageView` just call:
 
