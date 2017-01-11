@@ -36,18 +36,3 @@ Third. Delegate `onResume` and `onPause` methods of your `Activity` (or `Fragmen
     }
 
 That is it! You can start your app and you should see the camera preview.
-
-#### Modify camera preview and picture size
-
-You can easily change default camera preview and picture sizes using setters in `ScanbotCameraView`.
-
-    cameraView = (ScanbotCameraView) findViewById(R.id.camera);
-    cameraView.setCameraOpenCallback(new CameraOpenCallback() {
-        @Override
-        public void onCameraOpened() {
-            List<Camera.Size> supportedPictureSizes = cameraView.getSupportedPictureSizes();
-            cameraView.setPictureSize(supportedPictureSizes.get(0));
-            List<Camera.Size> supportedPreviewSizes = cameraView.getSupportedPreviewSizes();
-            cameraView.setPreviewSize(supportedPreviewSizes.get(0));
-        }
-    });
