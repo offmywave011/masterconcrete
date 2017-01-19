@@ -10,7 +10,7 @@ Therefore, before we can start processing, we should extract the `DocumentDraft`
 
 The logic for splitting `SnappingDraft` into a set of `DocumentDraft` objects is the responsibility of the `DocumentDraftExtractor`. You can customize it through the `ScanbotSDKInitializer`. The default implementation saves a document as a single PDF file.
 
-For your convenience we created an implementation of the extractor which always saves a document as set of JPEG images. You just have to set it up as follows:
+For your convenience we created an implementation of the extractor which always saves a document as a set of JPEG images. You just have to set it up as follows:
 
     new ScanbotSDKInitializer()
             .documentDraftExtractor(MultipleDocumentsDraftExtractor.forJpeg())
