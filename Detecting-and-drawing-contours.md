@@ -57,7 +57,7 @@ Done. If you'll start the app, the polygon will be drawn on the screen.
 
 #### Customizing drawn polygon
 
-`PolygonView` supports the following attributes (which you can add in XML, as shown in example above):
+`PolygonView` supports the following attributes (which you can add in XML, as shown in the example above):
 
 * `polygonStrokeWidth` - width (thickness) of polygon lines
 * `polygonStrokeColor` - color of polygon lines
