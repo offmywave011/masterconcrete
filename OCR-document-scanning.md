@@ -17,7 +17,7 @@ As for now, you have 2 options:
 
 * Download training data from the Scanbot server - replace the value with `http://download.scanbot.io/di/tessdata/`. (preferred)
 
-* Put an OCR data in the application assets directory - replace the value with a path to the folder in the assets directory `folder_with_traineddata/`. You can get trained data files from the Tesseract website: https://code.google.com/p/tesseract-ocr/downloads/list
+* Put the OCR data in the application assets directory - replace the value with a path to the folder in the assets directory `folder_with_traineddata/`. You can get trained data files from the Tesseract website: https://code.google.com/p/tesseract-ocr/downloads/list
 
 ## Preparing the data
 
