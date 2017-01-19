@@ -1,20 +1,20 @@
-To use `ImageQualityOptimizer` methods you need its instance first: ImageQualityOptimizer optimizer = new ImageQualityOptimizer(); 
+To use the `ImageQualityOptimizer` methods you need their instance first: ImageQualityOptimizer optimizer = new ImageQualityOptimizer(); 
 
 You can choose from two variants of the same method:
 
 Full version of `optimizeImage(Bitmap bitmap, float widthInches, float heightInches, long maxRequiredDpi)`. 
 Where: 
-* `bitmap` - source image you want to optimize
-* `widthInches` - suppositious physical width of photo source page
-* `heightInches` - suppositious physical height of photo source page
-* `maxRequiredDpi` - desirable quality
+* `bitmap` - the source image you want to optimize
+* `widthInches` - the suppositious physical width of photo source page
+* `heightInches` - the suppositious physical height of photo source page
+* `maxRequiredDpi` - the desirable quality
 
-Method returns optimized (scaled down) bitmap. If quality of source image will be less than `maxRequiredDpi`,then original bitmap  will be returned.
+The method returns an optimized (scaled down) bitmap. If the quality of the source image will be less than `maxRequiredDpi`,then the original bitmap will be returned.
 
-Shorter version of `optimizeImage(Bitmap bitmap, long requiredDpi)`.
-You don't need to pass suppositious physical size of source page to it, but final result can be less precise.
+A shorter version of `optimizeImage(Bitmap bitmap, long requiredDpi)`.
+You do not need to pass the suppositious physical size of a source page to it, but the final result might be less precise.
 
-Also contains `PageFormat` - common paper formats (width and height in inches).
+It also contains `PageFormat` - which refers to common paper formats (width and height in inches).
 
 Usage example:
 
