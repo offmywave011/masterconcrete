@@ -1,8 +1,8 @@
-Android camera API might be very tricky and far from being developer-friendly (in fact, very far). To help you skip same issues as we encountered while developing Scanbot we created `ScanbotCameraView`.
+The Android camera API might be very tricky and far from being developer-friendly (in fact, very far). To help you skip the same issues we encountered while developing Scanbot, we created `ScanbotCameraView`.
 
 #### Getting started
 
-`ScanbotCameraView` is available with SDK Package 1. To get started with it you have to do 3 steps.
+`ScanbotCameraView` is available with the SDK Package 1. To get started, you have to undertake 3 steps.
 
 First. Add permission to AndroidManifest.xml
 
