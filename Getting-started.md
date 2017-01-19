@@ -19,7 +19,7 @@ Afterwards, you can add a dependency to your project:
 
     compile "io.scanbot:sdk-package-1:$latestVersion"
 
-See latest version in [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
+See latest version in the [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
 
 ## Add license to AndroidManifest
 
@@ -33,7 +33,7 @@ Add the following line with the provided license key inside of your `<applicatio
 
     </application>
 
-Please make sure that you inserted the exact key as it is stated in the license file - with all line breaks.
+Please make sure that you have inserted the exact key as it is stated in the license file - with all line breaks.
 
 ## Initialize SDK
 
