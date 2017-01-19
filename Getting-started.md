@@ -1,8 +1,8 @@
-All following steps are assuming that you're using Gradle as a build tool. It is also possible to use it with Maven, but you should adjust steps accordingly.
+All of the following steps are assuming that you are using Gradle as a build tool. It is also possible to use it with Maven, but you should adjust the steps accordingly.
 
 ## Dependencies
 
-Scanbot SDK is distributed through our private repository which you should specify in your `build.gradle`:
+The Scanbot SDK is distributed through our private repository which you should specify in your `build.gradle`:
 
     repositories {
         jcenter()
@@ -15,7 +15,7 @@ Scanbot SDK is distributed through our private repository which you should speci
         }
     }
 
-Afterwards, you can add dependency to your project:
+Afterwards, you can add a dependency to your project:
 
     compile "io.scanbot:sdk-package-1:$latestVersion"
 
@@ -23,7 +23,7 @@ See latest version in [README](https://github.com/doo/Scanbot-SDK-Examples/blob/
 
 ## Add license to AndroidManifest
 
-Add the following line with license key inside of your `<application>` tag in `AndroidManifest.xml`:
+Add the following line with the provided license key inside of your `<application>` tag in `AndroidManifest.xml`:
 
     <application ...>
 
@@ -33,11 +33,11 @@ Add the following line with license key inside of your `<application>` tag in `A
 
     </application>
 
-Please, make sure that you inserted the key as it is in the license file - with all line breaks.
+Please make sure that you inserted the exact key as it is stated in the license file - with all line breaks.
 
 ## Initialize SDK
 
-Scanbot SDK must be initialized before usage. Add following line to your `Application` class:
+The Scanbot SDK must be initialized before usage. Add the following line to your `Application` class:
 
     @Override
     public void onCreate() {
