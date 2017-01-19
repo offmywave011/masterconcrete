@@ -1,4 +1,4 @@
-After you have set up `ScanbotCameraView` the next logical step would be to start using contour detection and draw the results on screen.
+After you have set up the `ScanbotCameraView` the next logical step would be to start using contour detection and draw the results on screen.
 
 #### Some background
 
