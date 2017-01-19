@@ -1,4 +1,4 @@
-The Android camera API might be very tricky and far from being developer-friendly (in fact, very far). To help you skip the same issues we encountered while developing Scanbot, we created `ScanbotCameraView`.
+The Android camera API might seem to be very tricky and far from being developer-friendly (in fact, very far). To help you skip the same issues we encountered while developing Scanbot, we created `ScanbotCameraView`.
 
 #### Getting started
 
