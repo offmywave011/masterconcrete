@@ -4,7 +4,7 @@ The Android camera API might seem to be very tricky and far from being developer
 
 `ScanbotCameraView` is available with the SDK Package 1. To get started, you have to undertake 3 steps.
 
-First: Add permission to AndroidManifest.xml
+First: Add this permission to the AndroidManifest.xml
 
     <uses-permission android:name="android.permission.CAMERA" />
 
