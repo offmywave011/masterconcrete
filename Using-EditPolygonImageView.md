@@ -2,7 +2,7 @@
 
 `EditPolygonImageView` is available with the SDK Package 1. To get started with it, you have to undertake a few steps.
 
-First. Add it to your layout:
+First: Add it to your layout:
 
     <net.doo.snap.ui.EditPolygonImageView
             android:layout_width="match_parent"
@@ -15,11 +15,11 @@ First. Add it to your layout:
 
 Custom parameters `app:editPolygonHandleSize` and `app:magneticLineTreshold` are optional. 
 
-Second. `EditPolygonImageView` supports the magnetic lines feature. You can set the lines like this:
+Second: `EditPolygonImageView` supports the magnetic lines feature. You can set the lines like this:
 
     editPolygonView.setLines(horizontalLinesList, verticalLinesList);
 
-Third. `EditPolygonImageView` supports the magnifying lens feature. To enable it, you should add `net.doo.snap.ui.MagnifierView` to your custom layout.
+Third: `EditPolygonImageView` supports the magnifying lens feature. To enable it, you should add `net.doo.snap.ui.MagnifierView` to your custom layout.
 
     <net.doo.snap.ui.MagnifierView
             android:id="@+id/magnifier"
