@@ -26,7 +26,7 @@ Use the `BlobFactory` and `BlobManager` dependencies:
     BlobManager blobManager = scanbotSDK.blobManager();
     BlobFactory blobFactory = scanbotSDK.blobFactory();
  
-Get OCR blobs for the language you want to perform OCR on, e.g. english:
+Get the OCR blobs for the language you want to perform OCR on, e.g. english:
     
     blobFactory.ocrLanguageBlobs(Language.ENG)
 
@@ -36,7 +36,7 @@ This method will return a collection of `Blob` instances which are required for 
 
 The OCR engine works with prepared optimized images. More specifically, it takes an image from a page which is stored as `Page.ImageType.OPTIMIZED`. By default, `PageFactory` does not provide this image for you, so it is up to you to pre-process the image and save it.
 
-Typically it iss done like this:
+Typically it is done like this:
 
     File imageFile = pageStoreStrategy.getImageFile(page.getId(), Page.ImageType.ORIGINAL);
 
@@ -59,7 +59,7 @@ To perform recognition with a composed PDF use:
     scanbotSDK.textRecognition().withPDF(Language defaultLanguage, Document document, List<Page> pages);
 
 Where:
-* `defaultLanguage` to perform recognition with. Use it to skip the part with language detection and only if you are sure with what language the recognition should be preformed. It also can be null.
+* `defaultLanguage` to perform recognition with. Use it to skip the part with language detection and only if you are sure with which language the recognition should be performed. It also can be null.
 * `document` into which a composed PDF will be written.
 * `pages` to perform OCR on.
 
