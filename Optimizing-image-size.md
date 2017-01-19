@@ -4,10 +4,10 @@ You can choose from two variants of the same method:
 
 Full version of `optimizeImage(Bitmap bitmap, float widthInches, float heightInches, long maxRequiredDpi)`. 
 Where: 
-* `bitmap` - the source image you want to optimize
-* `widthInches` - the suppositious physical width of photo source page
-* `heightInches` - the suppositious physical height of photo source page
-* `maxRequiredDpi` - the desirable quality
+* `bitmap` - is the source image you want to optimize
+* `widthInches` - is the suppositious physical width of photo source page
+* `heightInches` - is the suppositious physical height of photo source page
+* `maxRequiredDpi` - is the desirable quality
 
 The method returns an optimized (scaled down) bitmap. If the quality of the source image will be less than `maxRequiredDpi`,then the original bitmap will be returned.
 
