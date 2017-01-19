@@ -1,4 +1,4 @@
-With the SDK Package 1 you have the possibility to select which permissions to use in your app, depending on the set of SDK features which you use.
+With the SDK Package 1 you have the possibility to select which permissions to use in your app, depending on the set of SDK features that you use.
 
     android.permission.CAMERA
 
