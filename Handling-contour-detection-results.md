@@ -1,4 +1,4 @@
-You can handle contour detection results using `ContourDetectorFrameHandler#addResultHandler`. It might be useful if you want to guide your user through snapping process by, for instance, displaying respective icons and status messages.
+You can handle the contour detection results using `ContourDetectorFrameHandler#addResultHandler`. It might be useful if you want to guide your user through the snapping process by, for instance, displaying respective icons and status messages.
 
     contourDetectorFrameHandler.addResultHandler(new ContourDetectorFrameHandler.ResultHandler() {
 
@@ -10,9 +10,9 @@ You can handle contour detection results using `ContourDetectorFrameHandler#addR
 
     }
 
-**Warning:** this callback is coming from the worker thread. You need to move execution to main thread before updating UI.
+**Warning:** this callback is coming from the worker thread. You need to move execution to the main thread before updating the UI.
 
-On each frame you'll get `DetectedFrame` object which contains results of contour detection. One of the most important fields here is `detectionResult` which is basically a status of contour detection. Possible values are:
+On each frame you will get a `DetectedFrame` object which contains the results of the contour detection. One of the most important fields here is `detectionResult` which is basically the status of the contour detection. Possible values for this status are:
 
 * `OK` - contour detection was successful. Detected contour looks like a valid document. It's good time to take a picture.
 * `OK_BUT_TOO_SMALL` - document was detected, but it takes too small area in camera viewport. Quality can be improved by moving camera closer to the document.
