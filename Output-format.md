@@ -1,16 +1,16 @@
 ## Background
 
-In Scanbot SDK we have a notions of `SnappingDraft` and `DocumentDraft`.
+In the Scanbot SDK we have a notion of `SnappingDraft` and `DocumentDraft`.
 
-`SnappingDraft` is a direct result of snapping - set of files, pages and their properties. It is not yet a complete logical document. In fact - you might split such draft into several documents!
+`SnappingDraft` is a direct result of snapping - a set of files, pages and their properties. It is not yet a complete logical document. In fact - you might split such a draft into several documents!
 
-Therefore, before we can start processing we should extract `DocumentDraft` from `SnappingDraft`. Each `DocumentDraft` will represent a logical document which will be created, including information about document name and file format.
+Therefore, before we can start processing, we should extract the `DocumentDraft` from the `SnappingDraft`. Each `DocumentDraft` will represent a logical document which will be created including information about the document's name and file format.
 
 ## Extracting DocumentDrafts
 
-Logic for splitting `SnappingDraft` into set of `DocumentDraft` objects is responsibility of `DocumentDraftExtractor`. You can customize it through `ScanbotSDKInitializer`. Default implementation saves document as a single PDF file.
+The logic for splitting `SnappingDraft` into a set of `DocumentDraft` objects is the responsibility of the `DocumentDraftExtractor`. You can customize it through the `ScanbotSDKInitializer`. The default implementation saves a document as a single PDF file.
 
-For your convenience we created implementation of extractor which always saves document as set of JPEG images. You just have to set it up as follows:
+For your convenience we created an implementation of the extractor which always saves a document as set of JPEG images. You just have to set it up as follows:
 
     new ScanbotSDKInitializer()
             .documentDraftExtractor(MultipleDocumentsDraftExtractor.forJpeg())
