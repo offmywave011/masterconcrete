@@ -1,8 +1,8 @@
-To further improve user experience you might want to automatically take a photo when document is detected and conditions are good - we call this Autosnapping.
+To further improve the user experience, you might want to automatically take a photo when a document is detected and conditions are good - we call this Autosnapping.
 
 #### How to use it?
 
-Easy, just attach `AutoSnappingController` to the camera like following:
+It is easy: just attach `AutoSnappingController` to the camera like in the following example:
 
         ContourDetectorFrameHandler contourDetectorFrameHandler = ContourDetectorFrameHandler.attach(cameraView);
        
@@ -10,4 +10,4 @@ Easy, just attach `AutoSnappingController` to the camera like following:
 
         AutoSnappingController.attach(cameraView, contourDetectorFrameHandler);
 
-And you're done. Now camera will automatically take photos when conditions are perfect.
+And you're done. Now the camera will automatically take photos when the underlying conditions are perfect.
