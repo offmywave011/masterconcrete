@@ -2,11 +2,11 @@ After you have set up the `ScanbotCameraView` the next logical step would be to 
 
 #### Some background
 
-`ScanbotCameraView` has a method `getPreviewBuffer()` which allows you to register for preview frames from the camera. While you can implement your own smart features, Scanbot SDK comes with built-in `ContourDetectorFrameHandler` which performs contour detection and the outputs results to listeners.
+`ScanbotCameraView` has a method `getPreviewBuffer()` which allows you to register for preview frames from the camera. While you can implement your own smart features, the Scanbot SDK comes with built-in `ContourDetectorFrameHandler` which performs contour detection and the outputs results to listeners.
 
 #### Contour detection
 
-To start contour detection, you have to attach `ContourDetectorFrameHandler` to the preview buffer:
+To start contour detection, you have to attach the `ContourDetectorFrameHandler` to the preview buffer:
 
     ScanbotCameraView cameraView = (ScanbotCameraView) findViewById(R.id.cameraView);
 
@@ -17,7 +17,7 @@ or even shorter
 
     ContourDetectorFrameHandler frameHandler = ContourDetectorFrameHandler.attach(cameraView);
 
-At his point, contour detection becomes active. Now all we have to do is waiting for the results:
+At his point, the contour detection becomes active. Now all we have to do is wait for the results:
 
     frameHandler.addResultHandler(new ContourDetectorFrameHandler.ResultHandler() {
 
