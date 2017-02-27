@@ -11,3 +11,4 @@
 * [[OCR document scanning]]
 * [[Permissions]]
 * [[ProGuard]]
+* [[Open Source Libraries in Scanbot SDK]]
