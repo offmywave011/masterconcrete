@@ -54,3 +54,39 @@ You can easily change default camera preview and picture sizes using setters in 
         }
     });
     
+#### Enable continuous focus mode
+
+If you want to enable continuous focus mode you have to call `continuousFocus` method in `ScanbotCameraView`.
+This method should be called from the main thread and only when camera is opened.
+
+    cameraView = (ScanbotCameraView) findViewById(R.id.camera);
+        cameraView.setCameraOpenCallback(new CameraOpenCallback() {
+            @Override
+            public void onCameraOpened() {
+                cameraView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        cameraView.continuousFocus();
+                    }
+                });
+            }
+        });
+
+Continuous focus mode will be automatically disabled after `autoFocus` method call, autoFocus tap on `ScanbotCameraView` or after `takePicture` event. In this cases you have to call `continuousFocus` method again.
+
+    @Override
+    public void onPictureTaken(byte[] image, int imageOrientation) {
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = 8;
+
+        final Bitmap bitmap = BitmapFactory.decodeByteArray(image, 0, image.length, options);
+
+        resultView.post(new Runnable() {
+            @Override
+            public void run() {
+                resultView.setImageBitmap(bitmap);
+                cameraView.continuousFocus();
+                cameraView.startPreview();
+            }
+        });
+    }
