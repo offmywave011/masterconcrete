@@ -8,18 +8,24 @@ The Scanbot SDK is distributed through our private repository which you should s
         jcenter()
 
         maven {
-            url 'http://nexus.scanbot.io/nexus/content/repositories/releases/'
+            url 'https://nexus.scanbot.io/nexus/content/repositories/releases/'
         }
         maven {
-            url 'http://nexus.scanbot.io/nexus/content/repositories/snapshots/'
+            url 'https://nexus.scanbot.io/nexus/content/repositories/snapshots/'
         }
     }
 
 Afterwards, you can add a dependency to your project:
 
+For [Package I](https://scanbot.io/en/sdk.html#packages) features:
+
     compile "io.scanbot:sdk-package-1:$latestVersion"
 
-See latest version in the [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
+Or alternative for [Package II](https://scanbot.io/en/sdk.html#packages) features:
+
+    compile "io.scanbot:sdk-package-2:$latestVersion"
+
+Get the latest version number from the [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
 
 ## Add license to AndroidManifest
 
