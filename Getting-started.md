@@ -25,7 +25,7 @@ Or alternative for [Package II](https://scanbot.io/en/sdk.html#packages) feature
 
     compile "io.scanbot:sdk-package-2:$latestVersion"
 
-Get the latest version number from the [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
+Get the `$latestVersion` number from the [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
 
 ## Add license to AndroidManifest
 
