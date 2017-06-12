@@ -31,7 +31,7 @@ At his point, the contour detection becomes active. Now all we have to do is wai
 
 #### Contour detection parameters
 
-You can easily control contour detection sensitivity by modifying parameters in `ContourDetectorFrameHandler`:
+You can easily control contour detection sensitivity by modifying optional parameters in `ContourDetectorFrameHandler`:
 
     ContourDetectorFrameHandler frameHandler = ContourDetectorFrameHandler.attach(cameraView);
     frameHandler.setAcceptedAngleScore(75);
