@@ -29,6 +29,20 @@ At his point, the contour detection becomes active. Now all we have to do is wai
 
     });
 
+#### Contour detection parameters
+
+You can easily control contour detection sensitivity by modifying parameters in `ContourDetectorFrameHandler`:
+
+    ContourDetectorFrameHandler frameHandler = ContourDetectorFrameHandler.attach(cameraView);
+    frameHandler.setAcceptedAngleScore(75);
+    frameHandler.setAcceptedSizeScore(80);
+
+`setAcceptedAngleScore(Double acceptedAngleScore)` - set the minimum score in percent (0 - 100) of the perspective distortion to accept a detected document. Default is 75.0. You can set lower values to accept more perspective distortion.
+Warning: Lower values result in more blurred document images.
+
+`setAcceptedSizeScore(Double acceptedSizeScore)` - set the minimum size in percent (0 - 100) of the screen size to accept a detected document. It is sufficient that height or width match the score. Default is 80.0.
+Warning: Lower values result in low resolution document images.
+
 #### Drawing detected contour
 
 To draw the detected contour use `PolygonView`. First, add it as a sub-view of `ScanbotCameraView`:
