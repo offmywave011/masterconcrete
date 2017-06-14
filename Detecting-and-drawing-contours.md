@@ -31,17 +31,17 @@ At his point, the contour detection becomes active. Now all we have to do is wai
 
 #### Contour detection parameters
 
-You can easily control contour detection sensitivity by modifying optional parameters in `ContourDetectorFrameHandler`:
+You can easily control the contour detection sensitivity by modifying the optional parameters in `ContourDetectorFrameHandler`:
 
     ContourDetectorFrameHandler frameHandler = ContourDetectorFrameHandler.attach(cameraView);
     frameHandler.setAcceptedAngleScore(75);
     frameHandler.setAcceptedSizeScore(80);
 
-`setAcceptedAngleScore(Double acceptedAngleScore)` - set the minimum score in percent (0 - 100) of the perspective distortion to accept a detected document. Default is 75.0. You can set lower values to accept more perspective distortion.
+`setAcceptedAngleScore(Double acceptedAngleScore)` - set the minimum score in percent (0 - 100) of the perspective distortion to accept a detected document. The default value is 75.0. You can set lower values to accept more perspective distortion.
 
-Warning: Lower values result in more blurred document images.
+Warning: Lower values result document images which are blurred more.
 
-`setAcceptedSizeScore(Double acceptedSizeScore)` - set the minimum size in percent (0 - 100) of the screen size to accept a detected document. It is sufficient that height or width match the score. Default is 80.0.
+`setAcceptedSizeScore(Double acceptedSizeScore)` - set the minimum size in percent (0 - 100) of the screen size to accept a detected document. It is sufficient that either the height or the width match the score. The default value is 80.0.
 
 Warning: Lower values result in low resolution document images.
 
@@ -69,7 +69,7 @@ Second, `PolygonView` should receive callbacks from `ContourDetectorFrameHandler
     PolygonView polygonView = (PolygonView) findViewById(R.id.polygonView);
     frameHandler.addResultHandler(polygonView);
 
-Done. If you'll start the app, the polygon will be drawn on the screen.
+Done. If you are starting the app, the polygon will be drawn on the screen.
 
 #### Customizing drawn polygon
 
