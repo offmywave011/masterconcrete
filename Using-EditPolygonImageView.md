@@ -15,6 +15,14 @@ First: Add it to your layout:
 
 Custom parameters `app:editPolygonHandleSize` and `app:magneticLineTreshold` are optional. 
 
+Default polygon for `EditPolygonImageView` could be received from `ContourDetector`.
+`ContourDetector` always contains the latest detected contours information like lines and polygons. And after the first 
+detection you can set the latest detected contour to `EditPolygonImageView`.
+
+    ContourDetector detector = new ContourDetector();
+    DetectionResult detectionResult = detector.detect(image);
+    editPolygonView.setPolygon(detector.getPolygonF());
+
 Second: `EditPolygonImageView` supports the magnetic lines feature. You can set the lines like this:
 
     editPolygonView.setLines(horizontalLinesList, verticalLinesList);
