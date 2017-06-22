@@ -9,6 +9,7 @@
     * [[Advanced: Detection and Filters]]
 * [[Output format]]
 * [[OCR document scanning]]
+* [[Using SEPA PayFormScanner]]
 * [[Permissions]]
 * [[ProGuard]]
 * [[Open Source Libraries in Scanbot SDK]]
