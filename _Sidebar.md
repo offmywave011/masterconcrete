@@ -12,4 +12,5 @@
 * [[Using SEPA PayFormScanner]]
 * [[Permissions]]
 * [[ProGuard]]
+* [[License handling & issues]]
 * [[Open Source Libraries in Scanbot SDK]]
