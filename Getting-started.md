@@ -4,14 +4,16 @@ All of the following steps are assuming that you are using Gradle as a build too
 
 The Scanbot SDK is distributed through our private repository which you should specify in your `build.gradle`:
 
-    repositories {
-        jcenter()
+    allprojects {
+        repositories {
+            jcenter()
 
-        maven {
-            url 'https://nexus.scanbot.io/nexus/content/repositories/releases/'
-        }
-        maven {
-            url 'https://nexus.scanbot.io/nexus/content/repositories/snapshots/'
+            maven {
+                url 'https://nexus.scanbot.io/nexus/content/repositories/releases/'
+            }
+            maven {
+                url 'https://nexus.scanbot.io/nexus/content/repositories/snapshots/'
+            }
         }
     }
 
