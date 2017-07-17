@@ -9,15 +9,24 @@ Then, you have to add these permissions to your AndroidManifest.xml
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-The OCR module requires training data for text recognition for every language which it uses (you can decide on which languages to use). You have to add the specific url to AndroidManifest.xml for downloading OCR data.
+The OCR module of the Scanbot SDK requires training data files (aka. tessdata) for every language to perform text recognition. For each desired OCR language a corresponding training data file must be installed in the internal working directory of the Scanbot SDK. Furthermore the special data file `osd.traineddata` is required and must be installed. It is used for orientation and script detection. The Scanbot SDK ships with no training data files by default to keep the package small in size.
 
-    <meta-data android:name="ocr_blobs_path" android:value="Insert path here" />
+You have to specify following source URIs in the `AndroidManifest.xml` where Scanbot SDK can fetch the training data files:
 
-As for now, you have 2 options:
+    <meta-data android:name="ocr_blobs_path" android:value="https://github.com/tesseract-ocr/tessdata/raw/3.04.00" />
+    <meta-data android:name="language_classifier_blob_path" android:value="https://download.scanbot.io/di/android" />
 
-* Download training data from the Scanbot server - replace the value with `http://download.scanbot.io/di/tessdata/`. (preferred)
+The Scanbot SDK will download OCR files asynchronously via Android `DownloadManager`.
 
-* Put the OCR data in the application assets directory - replace the value with a path to the folder in the assets directory `folder_with_traineddata/`. You can get trained data files from the Tesseract website: https://code.google.com/p/tesseract-ocr/downloads/list
+Alternatively, you can define a local assets folder of your app as source URI for `ocr_blobs_path`:
+
+    <meta-data android:name="ocr_blobs_path" android:value="my_traineddata/" />
+
+In this case you have to download required OCR traineddata language files manually and place them in the application assets directory of your project: `assets/my_traineddata/`. The Scanbot SDK will fetch the OCR language files from this assets folder.
+
+**Please note:** The current Scanbot SDK supports training data files of Tesseract version **3.0x** only. 
+Please find a list of all supported languages in the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Data-Files#data-files-for-version-304305).
+
 
 ## Preparing the data
 
