@@ -1,7 +1,13 @@
 You have to add this ProGuard rules for all Scanbot SDK Packages:
 
 ```
--dontwarn
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-dontshrink
+-verbose
+-ignorewarnings
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*,!code/allocation/variable
 -renamesourcefileattribute SourceFile
 -keepattributes SourceFile,LineNumberTable,*Annotation*,Signature,InnerClasses
@@ -23,6 +29,10 @@ You have to add this ProGuard rules for all Scanbot SDK Packages:
     public static ** valueOf(java.lang.String);
 }
 
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
 -keep class * implements android.os.Parcelable {*;}
 
 -keepattributes Exceptions
@@ -34,20 +44,48 @@ You have to add this ProGuard rules for all Scanbot SDK Packages:
 -keep class android.support.v7.widget.** { *; }
 
 # Scanbot SDK
+
 -keep public class net.doo.snap.ScanbotSDKInitializer {
     public <methods>;
 }
 -keep public class net.doo.snap.ScanbotSDK {
     public <methods>;
 }
+-keep public class net.doo.snap.process.draft.** {
+    public <methods>;
+}
 -keep public class net.doo.snap.Constants { *; }
 -keep public class net.doo.snap.persistence.cleanup.Cleaner {
+    public <methods>;
+}
+-keep public class net.doo.snap.process.DocumentProcessingResult {
+    public <methods>;
+}
+-keep public class net.doo.snap.process.DocumentProcessor {
+    public <methods>;
+}
+-keep public class net.doo.snap.util.thread.MimeUtils {
+    public <methods>;
+}
+-keep public class net.doo.snap.ui.themes.ThemesProvider {
     public <methods>;
 }
 -keep public class net.doo.snap.intelligence.DocumentClassifier {
     public <methods>;
 }
 -keep public class net.doo.snap.intelligence.StubDocumentClassifier {
+    public <methods>;
+}
+-keep public class net.doo.snap.process.compose.ComposerFactory {
+    public <methods>;
+}
+-keep public class net.doo.snap.process.compose.BaseComposerFactory {
+    public <methods>;
+}
+-keep public class net.doo.snap.smartname.SmartNameGenerator {
+    public <methods>;
+}
+-keep public class net.doo.snap.smartname.StubSmartNameGenerator {
     public <methods>;
 }
 -keep public class net.doo.snap.persistence.cleanup.UnreferencedSourcesProvider {
@@ -59,7 +97,14 @@ You have to add this ProGuard rules for all Scanbot SDK Packages:
 -keep public class io.scanbot.sap.SapManager { *; }
 -keep public class net.doo.snap.entity.Language { *; }
 
+-keep public class net.doo.snap.util.FileUtils {
+    public <methods>;
+}
+-keep public class net.doo.snap.util.ManifestConstantsProvider  { *; }
 -keep public class net.doo.snap.PreferencesConstants  { *; }
+-keep public class net.doo.snap.util.CursorUtil {
+    public <methods>;
+}
 -keep public class net.doo.snap.PreferencesConstants  { *; }
 -keep public class net.doo.snap.util.log.DebugLog {
     public <methods>;
@@ -71,18 +116,58 @@ You have to add this ProGuard rules for all Scanbot SDK Packages:
     public <methods>;
 }
 -keep public class net.doo.snap.entity.OcrStatus { *; }
+-keep public class net.doo.snap.process.PDFProcessor {
+    public <methods>;
+}
 -keep public class net.doo.snap.persistence.PageStoreStrategy {
     public <methods>;
 }
+-keep public class net.doo.snap.util.device.DeviceUtils {
+    public <methods>;
+}
+-keep public class net.doo.snap.process.compose.Composer {
+    public <methods>;
+}
+-keep public class net.doo.snap.process.compose.JpegComposer {
+    public <methods>;
+}
+-keep public class net.doo.snap.process.compose.SimpleComposer {
+    public <methods>;
+}
+-keep public class net.doo.snap.process.compose.DummyComposer {
+    public <methods>;
+}
+-keep class net.doo.snap.process.compose.ComposerFactory { *; }
+-keep class net.doo.snap.process.compose.ComposerFactory$* { *; }
 -keep public class net.doo.snap.entity.Page { *; }
 -keep enum net.doo.snap.entity.Page$* { *; }
 -keep public class net.doo.snap.entity.RotationType { *; }
+-keep public class net.doo.snap.util.** { *; }
 -keep public class net.doo.snap.IntentExtras { *; }
--keep public class net.doo.snap.connectivity.ConnectionChecker {
+-keep public class net.doo.snap.ui.edit.events.DocumentRenamedEvent {
     public <methods>;
 }
+-keep public class net.doo.snap.process.DocumentLockProvider {
+    public <methods>;
+}
+-keep public class net.doo.snap.ui.widget.TermSpanDrawable {
+    public <methods>;
+}
+-keep public class net.doo.snap.interactor.addon.CheckConnectionUseCase.ConnectionChecker {
+    public <methods>;
+}
+-keep public class net.doo.snap.process.DocumentLockProvider {
+    public <methods>;
+}
+-keep public class net.doo.snap.ui.ScanbotDialogFragment { *; }
 -keep public class net.doo.snap.BuildConfig { *; }
+-keep public class net.doo.snap.ui.themes.ThemesProvider { *; }
 -keep public class net.doo.snap.entity.DocumentType { *; }
+-keep public class net.doo.snap.ui.edit.RenameDocumentFragment { *; }
+-keep public class net.doo.snap.ui.camera.CameraPreviewFragment { *; }
+-keep public class net.doo.snap.ui.camera.ScanbotCameraFragment { *; }
+-keep public class net.doo.snap.ui.camera.ScanbotCameraFragment* { *; }
+-keep public class net.doo.snap.ui.BarcodeFragment { *; }
 -keep public class net.doo.snap.persistence.PageFactory {
     public <methods>;
 }
@@ -93,11 +178,17 @@ You have to add this ProGuard rules for all Scanbot SDK Packages:
 
 -keep public class net.doo.snap.persistence.PageFactory$Result { *; }
 
+-keep public class net.doo.snap.process.TextRecognition { *; }
+-keep public class net.doo.snap.process.TextRecognizer {
+    public <methods>;
+}
+-keep public class net.doo.snap.process.OcrPerformer { *; }
+-keep public class net.doo.snap.process.OcrResult { *; }
+
 -keep public class net.doo.snap.camera.** { *; }
+-keep public class net.doo.snap.R { *; }
 
 -keep public class net.doo.snap.ui.** { *; }
--keep public class net.doo.snap.util.** { *; }
--keep public class net.doo.snap.process.** { *; }
 
 -keepclassmembers class * {
     void *(**Draft);
@@ -110,29 +201,6 @@ You have to add this ProGuard rules for all Scanbot SDK Packages:
     public void set*(...);
     public void get*(...);
 }
-
-# Roboguice
-
--keep class com.google.inject.Binder
-
--keepclassmembers class * {
-    @com.google.inject.Inject <init>(...);
-    @com.google.inject.Inject <fields>;
-    @javax.annotation.Nullable <fields>;
-}
-
--keep class com.google.inject.** { *; }
--keep class javax.inject.** { *; }
--keep class javax.annotation.** { *; }
-
--keep class roboguice.** { *; }
--dontwarn roboguice.**
--dontwarn org.roboguice.**
--dontwarn com.google.inject.**
--dontwarn com.google.common.**
--dontwarn org.apache.log4j.**
-
-# App specific
 
 -keep public class * extends com.google.inject.AbstractModule {*;}
 
