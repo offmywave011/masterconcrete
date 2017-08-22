@@ -63,12 +63,12 @@ This method should be called from the main thread and only when camera is opened
     cameraView.setCameraOpenCallback(new CameraOpenCallback() {
         @Override
         public void onCameraOpened() {
-            cameraView.post(new Runnable() {
+            cameraView.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     cameraView.continuousFocus();
                 }
-            });
+            }, 300);
         }
     });
 
