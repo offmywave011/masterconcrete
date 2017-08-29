@@ -226,4 +226,7 @@ You have to add this ProGuard rules for all Scanbot SDK Packages:
 
 -keeppackagenames com.googlecode.tesseract.android.**
 -keep public class com.googlecode.tesseract.android.**{ *; }
+
+-keeppackagenames io.scanbot.payformscanner.**
+-keep public class io.scanbot.payformscanner.**{ *; }
 ```
