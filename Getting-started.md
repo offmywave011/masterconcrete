@@ -45,6 +45,7 @@ So to be able to run on "arm64" devices you have just to add this `abiFilters` c
       }
     }
 
+Please note: `armeabi` architecture is not longer supported.
 
 ## Add license to AndroidManifest
 
