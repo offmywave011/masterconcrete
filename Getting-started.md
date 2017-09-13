@@ -47,20 +47,6 @@ So to be able to run on "arm64" devices you have just to add this `abiFilters` c
 
 Please note: `armeabi` architecture is not longer supported.
 
-## Add license to AndroidManifest
-
-Add the following line with the provided license key inside of your `<application>` tag in `AndroidManifest.xml`:
-
-    <application ...>
-
-        <meta-data android:name="SCANBOT_SDK_LICENSE_KEY" android:value="Insert your key here" />
-
-        ...
-
-    </application>
-
-Please make sure that you have inserted the exact key as it is stated in the license file - with all line breaks.
-
 ## Initialize SDK
 
 The Scanbot SDK must be initialized before usage. Add the following line to your `Application` class:
@@ -70,6 +56,16 @@ The Scanbot SDK must be initialized before usage. Add the following line to your
         new ScanbotSDKInitializer().initialize(this);
         super.onCreate();
     }
+
+## Add Scanbot SDK license
+
+Call `ScanbotSDKInitializer#license(application, "YOUR_SCANBOT_SDK_LICENSE_KEY")` method with the provided license key:
+
+    new ScanbotSDKInitializer()
+                .license(this, "YOUR_SCANBOT_SDK_LICENSE_KEY")
+                .initialize(this);
+
+Please make sure that you have inserted the exact key as it is stated in the license file - with all line breaks.
 
 ## License checks in production apps
 
