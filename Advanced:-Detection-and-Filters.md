@@ -30,3 +30,4 @@ Supported image filters:
 * `IMAGE_FILTER_COLOR_ENHANCED` - color-enhancement filter
 * `IMAGE_FILTER_GRAY` - grayscale filter
 * `IMAGE_FILTER_BINARIZED` - black&white filter
+* `IMAGE_FILTER_COLOR_DOCUMENT` - colored document image filter
