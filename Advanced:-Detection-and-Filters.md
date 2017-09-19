@@ -26,8 +26,8 @@ The parameters are:
 * `imageFilter` - code of the image filter.
 
 Supported image filters:
-* `IMAGE_FILTER_NONE` - don't use image filter, keep original colors
-* `IMAGE_FILTER_COLOR_ENHANCED` - color-enhancement filter
-* `IMAGE_FILTER_GRAY` - grayscale filter
-* `IMAGE_FILTER_BINARIZED` - black&white filter
-* `IMAGE_FILTER_COLOR_DOCUMENT` - colored document image filter
+* `ContourDetector.IMAGE_FILTER_NONE` - don't use image filter, keep original colors
+* `ContourDetector.IMAGE_FILTER_COLOR_ENHANCED` - color-enhancement filter
+* `ContourDetector.IMAGE_FILTER_GRAY` - grayscale filter
+* `ContourDetector.IMAGE_FILTER_BINARIZED` - black&white filter
+* `ContourDetector.IMAGE_FILTER_COLOR_DOCUMENT` - colored document image filter
