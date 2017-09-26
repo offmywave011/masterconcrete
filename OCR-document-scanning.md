@@ -77,3 +77,12 @@ It returns the `OcrResult` which consists of recognized text and a composed PDF.
 To get the recognized text only, use:
 
     scanbotSDK.textRecognition().withoutPDF(Language defaultLanguage, List<Page> pages);
+
+Also `OcrResult` contains recognized text paragraphs, text lines and words `OcrResultBlock` blocks with detected content information.
+
+Every `OcrResultBlock` contains:
+* `text` - the recognized text within the receivers bounding box.
+* `boundingBox` - the bounding box of the receiver in normalized unit coordinate space Left, Top:(0.0, 0.0) - Right, Bottom(1.0, 1.0).
+* `boundingBoxWithImageSize ` - the bounding box of the receiver in absolute image coordinate system.
+* `confidenceValue` - the confidence value describes how confident the OCR engine was when detecting the letters and words. Ranges from 0.0 (not confident) to 100.0 (very confident).
+* `blockType` - the type of the block `OcrResultBlockType.PARAGRAPH`, `OcrResultBlockType.LINE` or `OcrResultBlockType.WORD`.
