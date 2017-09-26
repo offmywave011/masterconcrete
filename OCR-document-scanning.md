@@ -59,6 +59,8 @@ Typically it is done like this:
 
     result.compress(Bitmap.CompressFormat.JPEG, 80, new FileOutputStream(optimizedFile));
 
+Or you can use `PageFactory#buildPage(Bitmap image)` and `PageFactory#buildPage(byte[] image)` methods, which stores original input image bitmap or byte array as OPTIMIZED image file and returns prepared `Page`.
+
 ## Recognizing text
 
 When all required blobs are downloaded, you can create documents using `TextRecognition`. It will run the text recognition and compose a PDF file as an option. `TextRecognition` must be created for each text recognition session.
