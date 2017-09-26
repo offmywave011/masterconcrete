@@ -59,7 +59,7 @@ Typically it is done like this:
 
     result.compress(Bitmap.CompressFormat.JPEG, 80, new FileOutputStream(optimizedFile));
 
-Or you can use `PageFactory#buildPage(Bitmap image)` and `PageFactory#buildPage(byte[] image)` methods, which stores original input image bitmap or byte array as OPTIMIZED image file and returns prepared `Page`.
+Or you can use `PageFactory#buildPage(Bitmap image)` and `PageFactory#buildPage(byte[] image)` methods, which stores original input image bitmap or byte array as `Page.ImageType.OPTIMIZED` image file and returns prepared `Page`.
 
 ## Recognizing text
 
