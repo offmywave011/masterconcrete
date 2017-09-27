@@ -1,8 +1,8 @@
 All of the following steps are assuming that you are using Gradle as a build tool. It is also possible to use it with Maven, but you should adjust the steps accordingly.
 
-## Dependencies
+## Scanbot SDK Dependencies
 
-The Scanbot SDK is distributed through our private repository which you should specify in your `build.gradle`:
+The Scanbot SDK for Android is distributed through our private repository which you should specify in your `build.gradle`:
 
     allprojects {
         repositories {
