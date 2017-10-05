@@ -47,6 +47,17 @@ So to be able to run on "arm64" devices you have just to add this `abiFilters` c
 
 Please note: `armeabi` architecture is not longer supported.
 
+
+## Tuning the Android Manifest
+Since your application works with images it is highly recommended to add the property `android:largeHeap="true"` in the `<application>` element of your `AndroidManifest.xml` file.
+Processing images is a memory intensive task and this property will ensure your app has enough heap allocated to avoid `OutOfMemoryError` exceptions.
+
+    <application
+      android:largeHeap="true"
+      ...
+    </application>
+
+
 ## Initialize SDK
 
 The Scanbot SDK must be initialized before usage. Add the following line to your `Application` class:
