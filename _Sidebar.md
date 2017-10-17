@@ -13,5 +13,5 @@
 * [[Permissions]]
 * [[ProGuard]]
 * [[License handling & issues]]
-* [[Pitfalls & issues]]
+* [[Pitfalls &amp; issues]]
 * [[Open Source Libraries in Scanbot SDK]]
