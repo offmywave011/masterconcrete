@@ -1,4 +1,4 @@
-# Scanbot SDK for Android
+# Scanbot SDK for Android Developer Guide
 
 ## Introduction
 
