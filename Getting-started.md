@@ -31,7 +31,7 @@ Get the `$latestVersion` number from the [README](https://github.com/doo/Scanbot
 
 ## ABI settings
 The Scanbot SDK uses native libraries under the hood and supports following [ABIs](https://developer.android.com/ndk/guides/arch.html): `armeabi-v7a` and `x86`.
-Currently we don't provide native libs the `arm64-v8a` architecture. But our `armeabi-v7a` libs are fully compatible with "arm64".
+Currently we don't provide native libs for the `arm64-v8a` architecture. But our `armeabi-v7a` libs are fully compatible with "arm64".
 So to be able to run on "arm64" devices you have just to add this `abiFilters` configuration in your `build.gradle`:
 
     ...
