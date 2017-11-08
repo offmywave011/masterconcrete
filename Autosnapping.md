@@ -11,3 +11,14 @@ It is easy: just attach `AutoSnappingController` to the camera like in the follo
         AutoSnappingController.attach(cameraView, contourDetectorFrameHandler);
 
 And you're done. Now the camera will automatically take photos when the underlying conditions are perfect.
+
+#### Sensitivity
+
+You can control auto-snapping speed by setting `sensitivity` parameter in `AutoSnappingController`. 
+
+        autoSnappingController.setSensitivity(1f);
+
+That is: the more sensitive it is the faster it shoots. Sensitivity must be within [0..1] range. A value of 1.0 triggers automatic capturing immediately, a value of 0.0 delays the automatic by 3 seconds.
+
+The default value is 0.66 (1 sec)
+
