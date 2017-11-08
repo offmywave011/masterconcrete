@@ -54,7 +54,7 @@ You can easily change default camera preview and picture sizes using setters in 
         }
     });
 
-#### Camera auto-focussing and shutter sounds
+#### Camera auto-focus and shutter sounds
 
 You can enable/disable auto-focus event system and shutter sounds using setters in `ScanbotCameraView`.
 
