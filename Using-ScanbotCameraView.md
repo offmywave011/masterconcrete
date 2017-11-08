@@ -53,7 +53,31 @@ You can easily change default camera preview and picture sizes using setters in 
             cameraView.startPreview();
         }
     });
+
+#### Camera auto-focussing and shutter sounds
+
+You can enable/disable auto-focus event system and shutter sounds using setters in `ScanbotCameraView`.
+
+    cameraView.setCameraOpenCallback(new CameraOpenCallback() {
+            @Override
+            public void onCameraOpened() {
+                cameraView.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        cameraView.setAutoFocusSound(false);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                            cameraView.setShutterSound(false);
+                        }
+                    }
+                }, 700);
+            }
+        });
     
+`cameraView.setShutterSound(boolean enabled)` set the camera shutter sound state. By default - `true`, the camera plays the system-defined camera shutter sound when takePicture() is called.
+
+Note that devices may not always allow disabling the camera shutter sound. If the shutter sound state cannot be set to the desired value, this method will be ignored.
+Also, it is supported only with Android API 17+. 
+
 #### Enable continuous focus mode
 
 If you want to enable continuous focus mode you have to call `continuousFocus` method in `ScanbotCameraView`.
