@@ -75,7 +75,7 @@ You can enable/disable auto-focus event system and shutter sounds using setters 
     
 `cameraView.setShutterSound(boolean enabled)` set the camera shutter sound state. By default - `true`, the camera plays the system-defined camera shutter sound when takePicture() is called.
 
-Note that devices may not always allow disabling the camera shutter sound. If the shutter sound state cannot be set to the desired value, this method will be ignored.
+Note that devices may not always allow disabling the camera shutter sound. If the shutter sound state cannot be set to the desired value, this method will be ignored. https://developer.android.com/reference/android/hardware/Camera.html#enableShutterSound(boolean)
 Also, it is supported only with Android API 17+. 
 
 #### Enable continuous focus mode
