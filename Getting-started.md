@@ -82,13 +82,13 @@ Please make sure that you have inserted the exact key as it is stated in the lic
 
 Please note:
 
-If your Scanbot SDK license has expired, any call of the Scanbot SDK API will terminate your app. To prevent this you should always check for license expiration during the runtime by calling the method `scanbotSDK.isLicenseActive()`. If this method returns `false`, you should disable any usage of the Scanbot SDK functions or UI components.
+If your Scanbot SDK license has expired, any call of the Scanbot SDK API will terminate your app. To prevent this you should always check for license expiration during the runtime by calling the method `scanbotSDK. isLicenseValid()`. If this method returns `false`, you should disable any usage of the Scanbot SDK functions or UI components.
 
 We highly recommend to implement a suitable handling of this case in your app!
 
 Example code for checking the license status
 
     ScanbotSDK scanbotSDK = new ScanbotSDK(activity);
-    if(scanbotSDK.isLicenseActive()) {
+    if(scanbotSDK. isLicenseValid()) {
         // Making your call into ScanbotSDK API is safe now.
     }
