@@ -1,6 +1,6 @@
 ## License checks in production apps
 **Please note:**
-If your Scanbot SDK license has expired, any call of the Scanbot SDK API will terminate your app or result in a  RuntimeException (no-op error). To prevent this you should always check for license expiration during the runtime by calling the method `new ScanbotSDK(activity).isLicenseActive()`. If this method returns `false`, you should disable any usage of the Scanbot SDK functions or UI components.
+If your Scanbot SDK license has expired, any call of the Scanbot SDK API will terminate your app or result in a  RuntimeException (no-op error). To prevent this you should always check for license expiration during the runtime by calling the method `new ScanbotSDK(activity).isLicenseValid()`. If this method returns `false`, you should disable any usage of the Scanbot SDK functions or UI components.
 
 We highly recommend to implement a suitable handling of this case in your app!
 
