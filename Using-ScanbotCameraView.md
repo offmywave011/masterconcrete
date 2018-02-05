@@ -54,6 +54,12 @@ You can easily change default camera preview and picture sizes using setters in 
         }
     });
 
+Also `ScanbotCameraView` supports 2 preview modes:
+* `CameraPreviewMode.FIT_IN` - in this mode camera preview frames will be downscaled to the layout view size. Full preview frame content will be visible, but unused edges could be appeared in the preview layout.
+* `CameraPreviewMode.FILL_IN` - in this mode camera preview frames fill the layout view. The preview frames may contain additional content on the edges that was not visible in the preview layout.
+
+By default, `ScanbotCameraView` uses `FILL_IN` mode. You can change it using `cameraView.setPreviewMode(CameraPreviewMode mode)` method.
+
 #### Camera auto-focus and shutter sounds
 
 You can enable/disable auto-focus event system and shutter sounds using setters in `ScanbotCameraView`.
