@@ -56,3 +56,39 @@ As a result you will get `MRZRecognitionResult` object that contains all extract
 * travel document type.
 
 That is it! You can start your app and you should see the camera preview which can scan MRZ data on your document.
+
+
+#### Finder overlay
+
+Scanbot SDK provides "Finder overlay" feature for MRZ scanner. It allows to predefine MRZ area over the `ScanbotCameraView` screen.
+
+With this overlay MRZ scanner could skip "MRZ area search" step and can perform recognition immediately in the specified "Finder overlay" area. Scanner recognises MRZ content much faster with this approach.
+
+To use "Finder overlay" on your screen you have to add any `View` with `android:id="@id/finder_overlay"` id to the `ScanbotCameraView` parent view. 
+
+Parent view should not have any paddings. `ScanbotCameraView` should have `android:layout_width="match_parent"` and `android:layout_height="match_parent"` layout parameters and no paddings or margins.
+
+"Finder overlay" view could have any margins, size, background or even child views, but it always should to be over the camera preview frame, otherwise it will throw `IllegalStateException`.
+
+    <RelativeLayout 
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <net.doo.snap.camera.ScanbotCameraView
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:id="@id/finder_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/mrz_finder_bg"/>
+
+    </RelativeLayout>   
+
+That is it!
