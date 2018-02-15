@@ -10,6 +10,8 @@
 * [[Output format]]
 * [[OCR document scanning]]
 * [[Using SEPA PayFormScanner]]
+* [[Using MRZ Scanner]]
+* [[Using DC Scanner]]
 * [[Permissions]]
 * [[ProGuard]]
 * [[License handling]]
