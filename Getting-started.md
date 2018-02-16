@@ -45,7 +45,7 @@ So to be able to run on "arm64" devices you have just to add this `abiFilters` c
       }
     }
 
-**Please note:** Typically the `x86` architecture can also be removed for the release (production) build, since it's used only on emulators. The `armeabi` architecture is not longer supported.
+**Please note:** Typically the `x86` architecture can also be removed for the release (production) build, since it's used only on emulators. The `armeabi` architecture is no longer supported.
 
 
 ## Tuning the Android Manifest
