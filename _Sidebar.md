@@ -12,6 +12,7 @@
 * [[Using SEPA PayFormScanner]]
 * [[Using MRZ Scanner]]
 * [[Using DC Scanner]]
+* [[Using Barcode Scanner]]
 * [[Permissions]]
 * [[ProGuard]]
 * [[License handling]]
