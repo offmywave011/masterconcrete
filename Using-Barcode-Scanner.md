@@ -19,5 +19,5 @@ The following barcode formats are currently supported:
 - AZTEC
 - PDF_417
 
-
+## Integration
 See our [Example App](https://github.com/doo/Scanbot-SDK-Examples/tree/master/ScanbotSDKexample/barcode-scanner) how to integrate the barcode scanner.
