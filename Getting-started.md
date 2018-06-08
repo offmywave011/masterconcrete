@@ -34,11 +34,8 @@ The Scanbot SDK uses native libraries under the hood and supports following [ABI
 Currently we don't provide native libs for the `arm64-v8a` architecture. But our `armeabi-v7a` libs are fully compatible with "arm64".
 So to be able to run on "arm64" devices you have just to add this `abiFilters` configuration in your `build.gradle`:
 
-    ...
     android {
-      ...
       defaultConfig {
-        ...
         ndk {
           abiFilters "armeabi-v7a", "x86"
         }
@@ -64,7 +61,10 @@ The Scanbot SDK must be initialized before usage. Add the following line to your
 
     @Override
     public void onCreate() {
-        new ScanbotSDKInitializer().initialize(this);
+        new ScanbotSDKInitializer()
+          // .license(this, "YOUR_SCANBOT_SDK_LICENSE_KEY")
+          .initialize(this);
+
         super.onCreate();
     }
 
