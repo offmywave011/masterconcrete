@@ -12,7 +12,7 @@ The RTU UI components are distributed as a separate package. Add it as dependenc
 
 Get the `$latestVersion` number from the [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
 
-## Initialize SDK and RTU UI Settings
+## Initialize SDK with RTU UI
 
 In order to use the RTU UI components you have to initialize the Scanbot SDK using the new `ScanbotSDKInitializer` class from the new Java package `io.scanbot.sdk`.
 
@@ -23,7 +23,10 @@ import io.scanbot.sdk.ScanbotSDKInitializer;
 
 @Override
 public void onCreate() {
-    new ScanbotSDKInitializer().initialize(this);
+    new ScanbotSDKInitializer()
+      // .license(this, "YOUR_SCANBOT_SDK_LICENSE_KEY")
+      .initialize(this);
+
     super.onCreate();
 }
 ```
