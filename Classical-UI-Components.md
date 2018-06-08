@@ -26,8 +26,13 @@ For example:
 
 - SEPA PayForm Scanning
   * `ScanbotCameraView`
-  * ...
+  * `PayFormScannerFrameHandler`
+  * `PayFormScanner`
 
 - Disability Certificates Scanning
   * `ScanbotCameraView`
-  * ...
+  * `DCScannerFrameHandler`
+  * `DCScanner`
+  * `ContourDetector`
+
+For more details about these components please check our Example Apps and [Java Docs](http://doo.github.io/Scanbot-SDK-Documentation/Android/).
