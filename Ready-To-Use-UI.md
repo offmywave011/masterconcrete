@@ -4,6 +4,14 @@ The **Ready-To-Use UI** (RTU UI) is a set of easy to integrate and customize hig
 - MRZ Scanner
 - Barcode and QR-Code Scanner
 
+The design and behavior of these ready-to-use Activities are based on our long years of experience as well as the feedback from our SDK customers.
+
+Customization:
+- UI: All colors and text resources ().
+- Behavior: Enable or disable features like Multi Page, Auto Snapping, Flash Light.
+- Use in workflows of your App: e.g. [Your Main Activity] => *[Document Scanner Activity]* => [Your Custom Review Activity] => *[Cropping Activity]* => [Your Custom Document Handling]...
+
+
 ## Dependencies
 
 The RTU UI components are distributed as a separate package. Add it as dependency to your project:
