@@ -3,3 +3,5 @@ Ready-To-Use UI is a set of easy to integrate and customize high-level UI compon
 - Cropping UI
 - MRZ Scanner UI
 - Barcode/QR-Code Scanner UI
+
+foo\U+2010bar
