@@ -16,8 +16,18 @@ For example:
 
 - Barcode and QR-Code Scanning
   * `ScanbotCameraView`
-  * ...
+  * `BarcodeDetectorFrameHandler`
 
 - MRZ Scanning
+  * `ScanbotCameraView`
+  * `MRZScannerFrameHandler`
+  * `MRZScanner`
+  * `ContourDetector`
+
+- SEPA PayForm Scanning
+  * `ScanbotCameraView`
+  * ...
+
+- Disability Certificates Scanning
   * `ScanbotCameraView`
   * ...
