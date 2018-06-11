@@ -30,19 +30,24 @@ Or alternative for [Package II](https://scanbot.io/en/sdk.html#packages) feature
 Get the `$latestVersion` number from the [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
 
 ## ABI settings
-The Scanbot SDK uses native libraries under the hood and supports following [ABIs](https://developer.android.com/ndk/guides/arch.html): `armeabi-v7a` and `x86`.
-Currently we don't provide native libs for the `arm64-v8a` architecture. But our `armeabi-v7a` libs are fully compatible with "arm64".
-So to be able to run on "arm64" devices you have just to add this `abiFilters` configuration in your `build.gradle`:
+The Scanbot SDK uses native libraries under the hood and supports following [ABIs](https://developer.android.com/ndk/guides/arch.html): `armeabi-v7a`, `arm64-v8a` and `x86`.
+
+Please check and adjust the `abiFilters` configuration in your `build.gradle` file accordingly:
 
     android {
       defaultConfig {
         ndk {
-          abiFilters "armeabi-v7a", "x86"
+          abiFilters "armeabi-v7a", "arm64-v8a", "x86"
         }
       }
     }
 
-**Please note:** Typically the `x86` architecture can also be removed for the release (production) build, since it's used only on emulators. The `armeabi` architecture is no longer supported.
+**Please note:** 
+- `arm64-v8a`: Native libs for the `arm64-v8a` architecture are available since version **1.31.0** of Scanbot SDK. Previous versions of Scanbot SDK use `armeabi-v7a` libs since they are fully compatible with "arm64".
+
+- `x86`: Typically the `x86` architecture can be removed for the release (production) build, since it's used only on emulators. 
+
+- `armeabi`: The `armeabi` architecture is no longer supported.
 
 
 ## Tuning the Android Manifest
