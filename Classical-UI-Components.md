@@ -37,6 +37,7 @@ For example:
 
 For more details about these components please check our Example Apps 
 - https://github.com/doo/Scanbot-SDK-Examples/tree/master/ScanbotSDKexample
+
 and Java Docs: 
 - http://doo.github.io/Scanbot-SDK-Documentation/Android/
 - http://doo.github.io/Scanbot-SDK-Documentation/Android/Core/
