@@ -35,6 +35,9 @@ For example:
   * `DCScanner`
   * `ContourDetector`
 
+
+## Examples and Java Docs
+
 For more details about these components please check our Example Apps 
 - https://github.com/doo/Scanbot-SDK-Examples/tree/master/ScanbotSDKexample
 
