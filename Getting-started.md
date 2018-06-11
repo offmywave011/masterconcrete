@@ -57,7 +57,9 @@ Processing images is a memory intensive task and this property will ensure your 
 
 ## Initialize SDK
 
-The Scanbot SDK must be initialized before usage. Add the following line to your `Application` class:
+The Scanbot SDK must be initialized before usage. Add the following code snippets to your `Application` class:
+
+    import io.scanbot.sdk.ScanbotSDKInitializer;
 
     @Override
     public void onCreate() {
@@ -67,6 +69,8 @@ The Scanbot SDK must be initialized before usage. Add the following line to your
 
         super.onCreate();
     }
+
+Please make sure to use the `ScanbotSDKInitializer` class from the new Java package `io.scanbot.sdk.` (`net.doo.snap.ScanbotSDKInitializer` is deprecated).
 
 ## Add Scanbot SDK license
 
