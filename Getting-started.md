@@ -95,7 +95,9 @@ If your Scanbot SDK license has expired, any call of the Scanbot SDK API will te
 
 We highly recommend to implement a suitable handling of this case in your app!
 
-Example code for checking the license status
+Example code for checking the license status:
+
+    import io.scanbot.sdk.ScanbotSDK;
 
     ScanbotSDK scanbotSDK = new ScanbotSDK(activity);
     if(scanbotSDK.isLicenseValid()) {
