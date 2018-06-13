@@ -20,4 +20,7 @@ The following barcode formats are currently supported:
 - PDF_417
 
 ## Integration
-See our [Example App](https://github.com/doo/Scanbot-SDK-Examples/tree/master/ScanbotSDKexample/barcode-scanner) how to integrate the barcode scanner.
+See our Example Apps how to integrate the barcode scanner.
+
+- Ready-To-Use UI: [ready-to-use-ui Example App](https://github.com/doo/Scanbot-SDK-Examples/tree/master/ScanbotSDKexample/ready-to-use-ui)
+- Classical UI Components: [barcode-scanner Example App](https://github.com/doo/Scanbot-SDK-Examples/tree/master/ScanbotSDKexample/barcode-scanner)
