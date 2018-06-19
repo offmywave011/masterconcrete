@@ -3,7 +3,7 @@ In this method you receive the image byte array of the original picture data and
 
 It is important to understand that this image data represents the **original picture** and not the cropped document image.
 
-To get the cropped document image, you have to perform document contour detection on it and apply the cropping operation by using the `ContourDetector` class:
+To get the cropped document image, you have to perform document contour detection on the original image and apply the cropping operation by using the `ContourDetector` class:
 
 
 ```
