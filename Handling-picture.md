@@ -1,9 +1,9 @@
 Once a picture has been taken, whether automatically by the autosnapping feature or manually by user, you have to handle the image data by implementing the method `public void onPictureTaken(byte[] image, int imageOrientation)` of the `PictureCallback` interface.
-Here you receive the image byte array of the original picture data and the image orientation value.
+In this method you receive the image byte array of the original picture data and the image orientation value.
 
-It is important to understand that this image data represents the original picture and not the cropped document image.
+It is important to understand that this image data represents the **original picture** and not the cropped document image.
 
-To get the cropped document image, you have to perform document contour detection on it and apply the cropping operation by using the `ContourDetector` class.
+To get the cropped document image, you have to perform document contour detection on it and apply the cropping operation by using the `ContourDetector` class:
 
 
 ```
