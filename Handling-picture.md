@@ -40,4 +40,7 @@ public void onPictureTaken(byte[] image, int imageOrientation) {
 ```
 
 ## Handling the `imageOrientation` parameter
-TODO ...
+
+The value of the `imageOrientation` parameter requires a special handling on some Android devices. It represents the image orientation based on the current device orientation.
+On most Android devices the value of `imageOrientation` will be `0`, but on some devices (like the most Samsung devices) the value will be `90`.
+You have to handle this value accordingly and rotate the original image. See the example code above or our example app.
