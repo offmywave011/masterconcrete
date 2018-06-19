@@ -1,6 +1,6 @@
 The Android camera API might seem to be very tricky and far from being developer-friendly (in fact, very far). To help you avoid the same issues which we have encountered while developing Scanbot, we created the `ScanbotCameraView`.
 
-#### Getting started
+### Getting started
 
 `ScanbotCameraView` is available with the SDK Package 1. To get started, you have to undertake 3 steps.
 
@@ -37,7 +37,7 @@ Third: Delegate `onResume` and `onPause` methods of your `Activity` (or `Fragmen
 
 That is it! You can start your app and you should see the camera preview.
 
-#### Modify camera preview and picture size
+### Modify camera preview and picture size
 
 You can easily change default camera preview and picture sizes using setters in `ScanbotCameraView`.
 
@@ -60,7 +60,7 @@ Also `ScanbotCameraView` supports 2 preview modes:
 
 By default, `ScanbotCameraView` uses `FILL_IN` mode. You can change it using `cameraView.setPreviewMode(CameraPreviewMode mode)` method.
 
-#### Camera auto-focus and shutter sounds
+### Camera auto-focus and shutter sounds
 
 You can enable/disable auto-focus event system and shutter sounds using setters in `ScanbotCameraView`.
 
@@ -86,7 +86,7 @@ https://developer.android.com/reference/android/hardware/Camera.html#enableShutt
 
 Also, it is supported only with Android API 17+. 
 
-#### Enable continuous focus mode
+### Enable continuous focus mode
 
 If you want to enable continuous focus mode you have to call `continuousFocus` method in `ScanbotCameraView`.
 This method should be called from the main thread and only when camera is opened.
@@ -119,3 +119,24 @@ Continuous focus mode will be automatically disabled after `autoFocus` method ca
             }
         });
     }
+
+### Orientation lock
+By default the `ScanbotCameraView` will create pictures with orientation based on the current device orientation. It is important to understand that the orientation of the taken picture is independent of the locked orientation mode of the `Activity`!
+
+For example: if you just lock the `Activity` to portrait mode, the orientation of the taken image will still be based on the current device orientation!
+
+Since the version **1.31.1** the Scanbot SDK provides the functionality to apply a real orientation lock in `ScanbotCameraView`. You can use the new methods `cameraView.lockToLandscape(boolean lockPicture)` or `cameraView.lockToPortrait(boolean lockPicture)` to lock the `Activity` **and** the taken picture to a desired orientation:
+
+```
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    // ...
+
+    cameraView = (ScanbotCameraView) findViewById(R.id.camera);
+
+    // Lock the orientation of the Activity as well as the orientation of the taken picture to portrait:
+    cameraView.lockToPortrait(true);
+
+    // ...
+}
+```
