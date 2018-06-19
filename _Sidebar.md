@@ -5,6 +5,7 @@
         * [[Detecting and drawing contours]]
         * [[Autosnapping]]
         * [[Handling contour detection results]]
+        * [[Handling camera picture]]
     * [[Using EditPolygonImageView]]
     * [[Using SEPA PayFormScanner]]
     * [[Using MRZ Scanner]]
