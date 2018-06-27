@@ -12,6 +12,10 @@ The design and behavior of these ready-to-use Activities are based on our long y
 - Behavior: Enable or disable features like Multi Page, Auto Snapping, Flash Light.
 - Use in workflows of your App: e.g. [Your Main Activity] => **[Document Scanner Activity]** => [Your Custom Review Activity] => **[Cropping Activity]** => [Your Custom Document Handling]...
 
+Please note: The main idea of the RTU UI is to provide a simple-to-integrate and simple-to-customize Activity components. Due to this idea there are some limitations with the possibilities of customization.
+If you need more customization options you have to implement custom Activities using our "Classical SDK UI Components".
+
+
 ## Integration
 
 ### Dependencies
