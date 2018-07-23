@@ -34,14 +34,8 @@ Third: `EditPolygonImageView` supports the magnifying lens feature. To enable it
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:magnifierImageSrc="@drawable/ui_crop_magnifier"
-            app:magnifierCrossSize="16dp"
-            app:magnifierCrossStrokeWidth="2dp"
-            app:magnifierStrokeWidth="4dp"
             app:magnifierRadius="36dp"
-            app:magnifierMargin="16dp"
-            app:editPolygonMagnifier="#fff" />
-
-The custom parameters `app:magnifierCrossSize`, `app:magnifierCrossStrokeWidth`, `app:magnifierStrokeWidth`, `app:magnifierRadius`, `app:magnifierMargin` and `app:editPolygonMagnifier` are optional.
+            app:magnifierMargin="16dp" />
 
 **Important** - you should set up the `MagnifierView` every time when editPolygonView is set with a new image:
 
