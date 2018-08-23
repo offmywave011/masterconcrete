@@ -10,10 +10,10 @@ It can be used in conjunction with `ScanbotCameraView` or separately. Let's have
 
 To get started, you have to undertake few steps.
 
-**First**: Fetch german language OCR blob.
+**First**: Fetch english language OCR blob.
 
     try {
-        Collection<Blob> blobs = blobFactory.ocrLanguageBlobs(Language.DEU);
+        Collection<Blob> blobs = blobFactory.ocrLanguageBlobs(Language.ENG);
 
         for (Blob blob : blobs) {
             blobManager.fetch(blob, false);
