@@ -1,4 +1,4 @@
-* * [[Getting started]]
+* [[Getting started]]
 * [[Ready To Use UI]]
 * [[Classical UI Components]]
     * [[Using ScanbotCameraView]]
