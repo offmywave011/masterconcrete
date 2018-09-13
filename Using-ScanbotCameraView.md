@@ -1,6 +1,6 @@
 The Android camera API might seem to be very tricky and far from being developer-friendly (in fact, very far). To help you avoid the same issues which we have encountered while developing Scanbot, we created the `ScanbotCameraView`.
 
-### Getting started
+### Getting Started
 
 `ScanbotCameraView` is available with the SDK Package 1. To get started, you have to undertake 3 steps.
 
@@ -47,7 +47,7 @@ The `ScanbotCameraView` supports 2 preview modes:
 By default, `ScanbotCameraView` uses `FILL_IN` mode. You can change it using `cameraView.setPreviewMode(CameraPreviewMode mode)` method.
 
 
-### Camera auto-focus and shutter sounds
+### Auto-focus Sound and Shutter Sound
 
 You can enable/disable auto-focus event system and shutter sounds using setters in `ScanbotCameraView`.
 
@@ -73,10 +73,9 @@ https://developer.android.com/reference/android/hardware/Camera.html#enableShutt
 
 Also, it is supported only with Android API 17+. 
 
-### Enable continuous focus mode
+### Continuous Focus Mode
 
-If you want to enable continuous focus mode you have to call `continuousFocus` method in `ScanbotCameraView`.
-This method should be called from the main thread and only when camera is opened.
+For most use cases it is recommended to enable the "Continuous Focus Mode" of the Camera. Use the `continuousFocus()` method of `ScanbotCameraView` for this. It should be called from the main thread and only when camera is opened (CameraOpenCallback):
 
     cameraView = (ScanbotCameraView) findViewById(R.id.camera);
     cameraView.setCameraOpenCallback(new CameraOpenCallback() {
@@ -87,11 +86,17 @@ This method should be called from the main thread and only when camera is opened
                 public void run() {
                     cameraView.continuousFocus();
                 }
-            }, 300);
+            }, 700);
         }
     });
 
-Continuous focus mode will be automatically disabled after `autoFocus` method call, autoFocus tap on `ScanbotCameraView` or after `takePicture` event. In this cases you have to call `continuousFocus()` method again.
+**Please note:** The Continuous Focus Mode will be automatically disabled 
+- after the `autoFocus` method call, 
+- after a tap on the `ScanbotCameraView` to perform the autoFocus, 
+- or after the `takePicture` event.
+In these cases you have to call the `continuousFocus()` method again to re-enable the Continuous Focus Mode.
+
+Example for the `takePicture` event, handling in the `onPictureTaken(..)` method:
 
     @Override
     public void onPictureTaken(byte[] image, int imageOrientation) {
@@ -107,12 +112,13 @@ Continuous focus mode will be automatically disabled after `autoFocus` method ca
         });
     }
 
-### Orientation lock
+
+### Orientation Lock
 By default the `ScanbotCameraView` will create pictures with orientation based on the current device orientation. It is important to understand that the orientation of the taken picture is independent of the locked orientation mode of the `Activity`!
 
 For example: if you just lock the `Activity` to portrait mode, the orientation of the taken image will still be based on the current device orientation!
 
-Since the version **1.31.1** the Scanbot SDK provides the functionality to apply a real orientation lock in `ScanbotCameraView`. You can use the new methods `cameraView.lockToLandscape(boolean lockPicture)` or `cameraView.lockToPortrait(boolean lockPicture)` to lock the `Activity` **and** the taken picture to a desired orientation:
+Since version **1.31.1** the Scanbot SDK provides the functionality to apply a real orientation lock in `ScanbotCameraView`. You can use the new methods `cameraView.lockToLandscape(boolean lockPicture)` or `cameraView.lockToPortrait(boolean lockPicture)` to lock the `Activity` **and** the taken picture to a desired orientation:
 
 ```
 @Override
