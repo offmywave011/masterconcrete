@@ -37,28 +37,15 @@ Third: Delegate `onResume` and `onPause` methods of your `Activity` (or `Fragmen
 
 That is it! You can start your app and you should see the camera preview.
 
-### Modify camera preview and picture size
 
-You can easily change default camera preview and picture sizes using setters in `ScanbotCameraView`.
+### Preview Mode
 
-    cameraView = (ScanbotCameraView) findViewById(R.id.camera);
-    cameraView.setCameraOpenCallback(new CameraOpenCallback() {
-        @Override
-        public void onCameraOpened() {
-            cameraView.stopPreview();
-            List<Camera.Size> supportedPictureSizes = cameraView.getSupportedPictureSizes();
-            cameraView.setPictureSize(supportedPictureSizes.get(0));
-            List<Camera.Size> supportedPreviewSizes = cameraView.getSupportedPreviewSizes();
-            cameraView.setPreviewSize(supportedPreviewSizes.get(0));
-            cameraView.startPreview();
-        }
-    });
-
-Also `ScanbotCameraView` supports 2 preview modes:
+The `ScanbotCameraView` supports 2 preview modes:
 * `CameraPreviewMode.FIT_IN` - in this mode camera preview frames will be downscaled to the layout view size. Full preview frame content will be visible, but unused edges could be appeared in the preview layout.
 * `CameraPreviewMode.FILL_IN` - in this mode camera preview frames fill the layout view. The preview frames may contain additional content on the edges that was not visible in the preview layout.
 
 By default, `ScanbotCameraView` uses `FILL_IN` mode. You can change it using `cameraView.setPreviewMode(CameraPreviewMode mode)` method.
+
 
 ### Camera auto-focus and shutter sounds
 
@@ -140,3 +127,31 @@ protected void onCreate(Bundle savedInstanceState) {
     // ...
 }
 ```
+
+
+### Advanced: Preview Size and Picture Size
+
+By default the `ScanbotCameraView` selects the best available picture size (resolution of the taken picture) and a suitable preview size (preview frames).
+
+You can change these values using the setter methods of `ScanbotCameraView`:
+
+    cameraView = (ScanbotCameraView) findViewById(R.id.camera);
+    cameraView.setCameraOpenCallback(new CameraOpenCallback() {
+        @Override
+        public void onCameraOpened() {
+            cameraView.stopPreview();
+
+            List<Camera.Size> supportedPictureSizes = cameraView.getSupportedPictureSizes();
+            // For demo purposes we just take the first picture size from the supported list!
+            cameraView.setPictureSize(supportedPictureSizes.get(0));
+            
+            List<Camera.Size> supportedPreviewSizes = cameraView.getSupportedPreviewSizes();
+            // For demo purposes we just take the first preview size from the supported list!
+            cameraView.setPreviewSize(supportedPreviewSizes.get(0));
+
+            cameraView.startPreview();
+        }
+    });
+
+⚠️ Please take the following into account when changing these values: On most devices the aspect ratio of the camera sensor (camera picture) does not match to the aspect ratio of the display.
+
