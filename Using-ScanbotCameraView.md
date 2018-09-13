@@ -90,10 +90,12 @@ For most use cases it is recommended to enable the "Continuous Focus Mode" of th
         }
     });
 
-**Please note:** The Continuous Focus Mode will be automatically disabled 
+**Please note:** The Continuous Focus Mode will be automatically disabled
+
 - after the `autoFocus` method call, 
 - after a tap on the `ScanbotCameraView` to perform the autoFocus, 
 - or after the `takePicture` event.
+
 In these cases you have to call the `continuousFocus()` method again to re-enable the Continuous Focus Mode.
 
 Example for the `takePicture` event, handling in the `onPictureTaken(..)` method:
