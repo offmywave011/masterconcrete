@@ -35,11 +35,11 @@ You will use this object to access the SDK's features.
 
 #### Step 1 - Scanning
 
-This topic is covered here: [Using ScanbotCameraView](https://github.com/doo/Scanbot-SDK-Examples/wiki/Using-ScanbotCameraView)
+This topic is covered here: [[Using ScanbotCameraView]]
 
 #### Step 2 - Cropping and filtering
 
-This topic is covered here: [Detection and Filters](https://github.com/doo/Scanbot-SDK-Examples/wiki/Advanced%3A-Detection-and-Filters)
+This topic is covered here: [[Advanced: Detection and Filters]]
 
 #### Step 3 - Create `Page`
 
