@@ -2,6 +2,8 @@ Scanbot SDK provides ability to find and extract content form Disability Certifi
 
 #### Getting started
 
+Try our [DC Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/dc-scanner) or check these step by step integration instructions: 
+
 `DCScanner` is available with the SDK Package 4. You have to add the following dependency for it:
 
     compile "io.scanbot:sdk-package-4:$latestVersion"
