@@ -17,9 +17,9 @@ The current version of the SDK is **1.37.0**
 ##### 1.36.0
 - 🚀 Improvements: 
   * MRZ Recognizer: improved detection on still images and parsing of some optional MRZ fields.
+  * Check out the updated [mrz-scanner](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/mrz-scanner) and [ready-to-use-ui](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/ready-to-use-ui) example apps.
 - ⚠️ Breaking changes: 
   * All MRZ Scanner and Recognizer components (`MRZScanner`, `MRZScannerActivity`) now require an additional trained data blob file (MRZ cascade blob file `mrz.xml`), which is included in the SDK `io.scanbot:sdk-package-3` and can be fetched via `blobManager.fetch(blobFactory.mrzCascadeBlob(), false)`!
-- Check out the updated [mrz-scanner](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/mrz-scanner) and [ready-to-use-ui](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/ready-to-use-ui) example apps.
 
 ##### 1.35.0
 - 🎉 NEW: 
