@@ -27,7 +27,7 @@ Or alternative for [Package II](https://scanbot.io/en/sdk.html#packages) feature
 
     compile "io.scanbot:sdk-package-2:$latestVersion"
 
-Get the `$latestVersion` number from the [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
+Get the `$latestVersion` number from [[Release History]].
 
 ## ABI settings
 The Scanbot SDK uses native libraries under the hood and supports following [ABIs](https://developer.android.com/ndk/guides/arch.html): `armeabi-v7a`, `arm64-v8a` and `x86`.
