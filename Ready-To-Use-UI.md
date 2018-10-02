@@ -48,7 +48,7 @@ public void onCreate() {
 ## Examples and Java Docs
 
 For more details about the RTU UI components please check our Example App `ready-to-use-ui`
-- https://github.com/doo/Scanbot-SDK-Examples/tree/master/ScanbotSDKexample/ready-to-use-ui
+- https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/ready-to-use-ui
 
 and Java API Docs: 
 - https://scanbotsdk.github.io/documentation/android/api/io.scanbot.sdk/
