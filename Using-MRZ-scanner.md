@@ -36,7 +36,7 @@ To get started, you have to undertake few steps.
 
 `MRZScanner` requires a specific OCR blob file `ocrb.traineddata`. This blob file is integrated in the Scanbot SDK package 3 assets. So you don't need to configure OCR blob paths like `ocr_blobs_path` or `language_classifier_blob_path` for MRZ.
 
-More information about the general handling of OCR blob files can be found here: https://github.com/doo/Scanbot-SDK-Examples/wiki/OCR-document-scanning#preparing-the-data.
+More information about the general handling of OCR blob files can be found here: https://github.com/doo/scanbot-sdk-example-android/wiki/OCR-document-scanning#preparing-the-data
 
 **Second**: Get `MRZScanner` instance from `ScanbotSDK` and attach it to `ScanbotCameraView`
 
