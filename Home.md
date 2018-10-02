@@ -6,6 +6,10 @@ The Scanbot SDK brings scanning and document creation capabilities to your mobil
 
 Implement the **Ready-To-Use UI** with only a few lines of code and get the same look and feel as our award winning scanner app Scanbot. Benefit from a proven user experience, super fast integration time and customizable colors and text to match your brand. Or dive into our **Classical UI Components** and build your fully customized scanning experience.
 
+## Release History
+
+See [[Release History]]
+
 ## Requirements
 
 Operating system:
