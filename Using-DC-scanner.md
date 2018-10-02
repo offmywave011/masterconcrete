@@ -24,7 +24,7 @@ To get started, you have to undertake few steps.
         logger.logException(e);
     }
 
-More information about blobs fetching you can find here: https://github.com/doo/Scanbot-SDK-Examples/wiki/OCR-document-scanning#preparing-the-data.
+More information about blobs fetching you can find here: https://github.com/doo/scanbot-sdk-example-android/wiki/OCR-document-scanning#preparing-the-data
 
 **Second**: Get `DCScanner` instance from `ScanbotSDK` and attach it to `ScanbotCameraView`
 
