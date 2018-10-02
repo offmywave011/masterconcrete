@@ -28,4 +28,4 @@ Internet connection:
 
 ## Getting started
 
-[[Getting started]]
+👉 [[Getting started]]
