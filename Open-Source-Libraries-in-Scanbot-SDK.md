@@ -1,3 +1,3 @@
 Open Source libraries used in the Scanbot SDK for Android
 
-Please see [LIBRARIES.txt](https://github.com/doo/Scanbot-SDK-Examples/blob/master/LIBRARIES.txt)
+For a full list please see the file [LIBRARIES.txt](https://github.com/doo/scanbot-sdk-example-android/blob/master/LIBRARIES.txt)
