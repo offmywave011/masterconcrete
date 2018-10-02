@@ -20,7 +20,7 @@ Depending on the type of document following fields can be extracted:
 
 #### Getting started
 
-Try our [Example App](https://github.com/doo/Scanbot-SDK-Examples/tree/master/ScanbotSDKexample/mrz-scanner) or check these step by step integration instructions: 
+Try our [MRZ Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/mrz-scanner) or check these step by step integration instructions: 
 
 `MRZScanner` is available with the SDK Package 3. You have to add the following dependency for it:
 
