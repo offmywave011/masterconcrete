@@ -24,7 +24,7 @@ Alternatively, you can define a local assets folder of your app as source URI fo
 
 In this case you have to download required OCR traineddata language files manually and place them in the application assets directory of your project: `assets/my_traineddata/`. The Scanbot SDK will fetch the OCR language files from this assets folder.
 
-**Please note:** The current Scanbot SDK supports training data files of Tesseract version **3.0x** only. 
+**Please note:** The current Scanbot SDK supports training data files of Tesseract version **3.04/3.05** only. 
 Please find a list of all supported languages in the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Data-Files#data-files-for-version-304305).
 
 
