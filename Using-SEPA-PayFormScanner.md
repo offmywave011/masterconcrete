@@ -21,7 +21,7 @@ To get started, you have to undertake few steps.
         blobManager.fetch(blob, false);
     }
 
-More information about blobs fetching you can find here: https://github.com/doo/Scanbot-SDK-Examples/wiki/OCR-document-scanning#preparing-the-data
+You can find more information about fetching and preparing the blobs here: https://github.com/doo/scanbot-sdk-example-android/wiki/OCR-document-scanning#preparing-the-data
 
 **Second**: Get `PayFormScanner` instance from `ScanbotSDK` and attach it to `ScanbotCameraView`
 
