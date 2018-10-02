@@ -1,1 +1,1 @@
-© 2018 doo GmbH. All rights reserved. http://scanbot.io/sdk.html
+© 2018 doo GmbH. All rights reserved. https://scanbot.io/sdk
