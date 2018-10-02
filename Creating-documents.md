@@ -63,7 +63,7 @@ Now, when you have a page, you can add it to `SnappingDraft`. This object repres
 
 Each `DocumentDraft` represents a template for a new document. Anyhow, the document itself is not created yet - each draft should be processed by `DocumentProcessor` before you will get the actual files.
 
-`scanbotSDK.documentDraftExtractor()` returns default `DocumentDraftExctactor` which treats every `snappingDraft` as single document. You can change this behaviour by either implementing your own extractor or using one which is coming with the SDK (see [MultipleDocumentsDraftExtractor](http://doo.github.io/Scanbot-SDK-Documentation/Android/net/doo/snap/process/draft/MultipleDocumentsDraftExtractor.html)
+`scanbotSDK.documentDraftExtractor()` returns default `DocumentDraftExctactor` which treats every `snappingDraft` as single document. You can change this behaviour by either implementing your own extractor or using one which is coming with the SDK (see API docs of `MultipleDocumentsDraftExtractor`).
 
 **Note:** you don't have to start processing instantly. For instance, you can persist `DocumentDraft` and perform processing at some point in the future.
 
