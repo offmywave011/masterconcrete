@@ -8,7 +8,7 @@ Implement the **Ready-To-Use UI** with only a few lines of code and get the same
 
 ## Release History
 
-See [[Release History]]
+👉 [[Release History]]
 
 ## Requirements
 
