@@ -6,7 +6,7 @@ The current version of the SDK is **1.38.1**
 ## Release History and Changelog
 
 ##### 1.38.1
-- 🚀 Bug fixes: 
+- 🐞 Bug fixes: 
   * Fixed a bug with freezing camera on Activity start
   * Fixed "CroppingActivity" layout for "ready-to-use-ui".
 
