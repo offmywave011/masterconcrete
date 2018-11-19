@@ -5,6 +5,10 @@ The current version of the SDK is **1.38.2**
 
 ## Release History and Changelog
 
+##### 1.38.3
+- 🐞 Bug fixes: 
+  * Small fixes in `MRZScanner` (improved detection on still images of some ID cards)
+
 ##### 1.38.2
 - 🚀 Improvements: 
   * Updated Google Mobile Vision lib version to 16.2.0
