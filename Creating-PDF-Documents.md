@@ -1,4 +1,4 @@
-Since version **1.40.0** the Scanbot SDK for Android provides a simple and convenient API ([`PDFRenderer`](https://scanbotsdk.github.io/documentation/android/api/io.scanbot.sdk/io/scanbot/sdk/process/PDFRenderer.html)) to create multipage PDF files. Each image will be stored as a PDF page.
+Since version **1.40.0** the Scanbot SDK for Android provides a simple and convenient API ([`PDFRenderer`](https://scanbotsdk.github.io/documentation/android/api/io.scanbot.sdk/io/scanbot/sdk/process/PDFRenderer.html)) to create PDF document files. The `PDFRenderer` supports multi-page PDFs where each given image will be stored as a PDF page.
 
 Get an instance of `PDFRenderer` from `ScanbotSDK`:
 ```
