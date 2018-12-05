@@ -10,9 +10,10 @@ Using the internal storage provides following benefits:
 - https://developer.android.com/training/data-storage/files
 
 
-## Overwrite the default storage directory
-It is strongly recommended to use the internal storage. However, you can change the default storage directory of the Scanbot SDK on initialization.
+## Change the default storage directory
+It is strongly recommended to use the internal storage. However, you can overwrite the default storage directory of the Scanbot SDK on initialization.
 The `ScanbotSDKInitializer` class provides the method `sdkFilesDirectory(Application application, File sdkFilesDirectory)` which allows to change the default storage directory.
+
 Example:
 ```
 import io.scanbot.sdk.ScanbotSDKInitializer;
