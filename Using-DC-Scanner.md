@@ -1,4 +1,15 @@
-The Scanbot SDK provides the ability to find and extract content from German **Disability Certificates** (DC) forms.
+The Scanbot SDK provides the ability to find and extract content from German **Disability Certificates** (DC / AU-Bescheinigung) forms. 
+
+Following fields can be extracted:
+* Checkboxes:
+  - Initial Certificate (Erstbescheinigung)
+  - Renewed Certificate (Folgebescheinigung)
+  - Work Accident (Arbeitsunfall, Arbeitsunfallfolgen, Berufskrankheit)
+  - Assigned To Accident Insurance Doctor (dem Durchgangsarzt zugewiesen)
+* Date Fields:
+  - Incapable Since (arbeitsunfähig seit)
+  - Incapable Until (voraussichtlich arbeitsunfähig bis ...)
+  - Diagnosed On (festgestellt am)
 
 Try our [DC Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/dc-scanner) or check the following step by step integration instructions.
 
