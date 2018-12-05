@@ -30,9 +30,16 @@ It can be used in conjunction with `ScanbotCameraView` or separately. Let's have
 
 To get started, you have to undertake few steps.
 
-**First**: Fetch MRZ specific OCR blob file.
+**First**: Prepare the MRZ specific OCR blob files on initialization of the SDK:
 
-    blobManager.fetch(blobFactory.mrzTraineddataBlob(), false);
+```
+import io.scanbot.sdk.ScanbotSDKInitializer;
+
+new ScanbotSDKInitializer()
+      .prepareMRZBlobs(true)
+      ...
+      .initialize(this);
+```
 
 `MRZScanner` requires a specific OCR blob file `ocrb.traineddata`. This blob file is integrated in the Scanbot SDK package 3 assets. So you don't need to configure OCR blob paths like `ocr_blobs_path` or `language_classifier_blob_path` for MRZ.
 
