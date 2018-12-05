@@ -40,7 +40,7 @@ new ScanbotSDKInitializer()
     final PayFormScanner payFormScanner = scanbotSDK.payFormScanner();
     PayFormScannerFrameHandler payFormScannerFrameHandler = PayFormScannerFrameHandler.attach(cameraView, payFormScanner);
 
-**Third**: Add result handler for `PayFormScannerFrameHandler`:
+### Step 4 - Add result handler for `PayFormScannerFrameHandler`:
 
     payFormScannerFrameHandler.addResultHandler(new PayFormScannerFrameHandler.ResultHandler() {
         @Override
