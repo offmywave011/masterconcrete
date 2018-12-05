@@ -1,38 +1,40 @@
-Scanbot SDK provides ability to find and extract content form Disability Certificates.
+The Scanbot SDK provides the ability to find and extract content from German **Disability Certificates** (DC) forms.
 
 #### Getting started
 
-Try our [DC Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/dc-scanner) or check these step by step integration instructions: 
+Try our [DC Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/dc-scanner) or check the following step by step integration instructions.
 
+### Step 1 - Add DC Feature as Dependency
 `DCScanner` is available with the SDK Package 4. You have to add the following dependency for it:
 
-    compile "io.scanbot:sdk-package-4:$latestVersion"
+    api "io.scanbot:sdk-package-4:$latestVersion"
 
 It can be used in conjunction with `ScanbotCameraView` or separately. Let's have a look at example with `ScanbotCameraView`.
 
-To get started, you have to undertake few steps.
+### Step 2 - Prepare the OCR language blob file
 
-**First**: Fetch english language OCR blob.
+The DC Recognizer is based on the OCR Feature of Scanbot SDK. Please check the [[Optical-Character-Recognition]] docs for more details.
 
-    try {
-        Collection<Blob> blobs = blobFactory.ocrLanguageBlobs(Language.ENG);
+In order to use the DC Recognizer you need to prepare the English OCR language file.
+Place the `eng.traineddata` file in the assets sub-folder `assets/ocr_blobs/` of your app. 
 
-        for (Blob blob : blobs) {
-            blobManager.fetch(blob, false);
-        }
-    } catch (IOException e) {
-        logger.logException(e);
-    }
+Then on initialization of the SDK call the `prepareOCRLanguagesBlobs(true)` method:
 
-More information about blobs fetching you can find here: https://github.com/doo/scanbot-sdk-example-android/wiki/OCR-document-scanning#preparing-the-data
+import io.scanbot.sdk.ScanbotSDKInitializer;
+```
+new ScanbotSDKInitializer()
+      .prepareOCRLanguagesBlobs(true)
+      ...
+      .initialize(this);
+```
 
-**Second**: Get `DCScanner` instance from `ScanbotSDK` and attach it to `ScanbotCameraView`
+### Step 3 - Get `DCScanner` instance from `ScanbotSDK` and attach it to `ScanbotCameraView`
 
     ScanbotSDK scanbotSDK = new ScanbotSDK(this);
     final DCScanner dcScanner = scanbotSDK.dcScanner();
     DCScannerFrameHandler dcScannerFrameHandler = DCScannerFrameHandler.attach(cameraView, dcScanner);
 
-**Third**: Add result handler for `DCScannerFrameHandler`:
+### Step 4 - Add result handler for `DCScannerFrameHandler`
 
     dcScannerFrameHandler.addResultHandler(new DCScannerFrameHandler.ResultHandler() {
             @Override
