@@ -5,8 +5,7 @@ Following fields are supported:
 - BIC 
 - Transfer Amount 
 - Reference Number
-- Receiver Name
-- Sender name
+- Sender IBAN / Name
 
 Try our [PayForm Scanner Example App](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/payform-scanner) or check the following step by step integration instructions.
 
