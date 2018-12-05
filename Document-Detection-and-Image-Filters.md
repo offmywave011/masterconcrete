@@ -23,9 +23,14 @@ The parameters are:
 * `polygon` - Detected boundaries as polygon `List` (`detector.getPolygonF()`) or an empty `List` if cropping is not desired and you just want to apply an image filter.
 * `imageFilter` - Code of the optional image filter to apply.
 
-Supported image filters:
-* `ContourDetector.IMAGE_FILTER_NONE` - don't use image filter, keep original colors
-* `ContourDetector.IMAGE_FILTER_COLOR_ENHANCED` - color-enhancement filter
-* `ContourDetector.IMAGE_FILTER_GRAY` - grayscale filter
-* `ContourDetector.IMAGE_FILTER_BINARIZED` - black&white filter
-* `ContourDetector.IMAGE_FILTER_COLOR_DOCUMENT` - colored document image filter
+The result `documentBitmap` is the cropped (and optionally filtered) document image.
+
+Constants for supported image filters:
+* `ContourDetector.IMAGE_FILTER_NONE` - Don't apply an image filter, keep original colors.
+* `ContourDetector.IMAGE_FILTER_COLOR_ENHANCED` - Optimizes colors, contrast and brightness.
+* `ContourDetector.IMAGE_FILTER_GRAY` - Grayscale filter.
+* `ContourDetector.IMAGE_FILTER_BINARIZED` - Standard binarization filter with contrast optimization. Creates a grayscaled 8-bit image with mostly black or white pixels.
+* `ContourDetector.IMAGE_FILTER_COLOR_DOCUMENT` - MagicColor filter. Fixes white-balance and cleans up the background.
+* `ContourDetector.IMAGE_FILTER_PURE_BINARIZED` - A filter for binarizing an image. Creates an image with pixel values set to either pure black or pure white.
+* `ContourDetector.IMAGE_FILTER_BLACK_AND_WHITE` - Black and white filter with background cleaning. Creates a grayscaled 8-bit image with mostly black or white pixels.
+* `ContourDetector.IMAGE_FILTER_BACKGROUND_CLEAN` - Cleans up the background and tries to preserve photos within the image.
