@@ -18,19 +18,18 @@ Depending on the type of document following fields can be extracted:
 * travel document type.
 
 
-#### Getting started
+Try our [MRZ Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/mrz-scanner) or check the following step by step integration instructions.
 
-Try our [MRZ Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/mrz-scanner) or check these step by step integration instructions: 
-
+### Step 1 - Add MRZ Feature as Dependency
 `MRZScanner` is available with the SDK Package 3. You have to add the following dependency for it:
+```
+api "io.scanbot:sdk-package-3:$latestVersion"
+```
 
-    compile "io.scanbot:sdk-package-3:$latestVersion"
+MRZ Scanner can be used in conjunction with `ScanbotCameraView` or separately. Let's have a look at an example with `ScanbotCameraView`.
 
-It can be used in conjunction with `ScanbotCameraView` or separately. Let's have a look at an example with `ScanbotCameraView`.
 
-To get started, you have to undertake few steps.
-
-**First**: Prepare the MRZ specific OCR blob files on initialization of the SDK:
+### Step 2 - Prepare the MRZ specific OCR blob files on initialization of the SDK
 
 ```
 import io.scanbot.sdk.ScanbotSDKInitializer;
@@ -41,17 +40,13 @@ new ScanbotSDKInitializer()
       .initialize(this);
 ```
 
-`MRZScanner` requires a specific OCR blob file `ocrb.traineddata`. This blob file is integrated in the Scanbot SDK package 3 assets. So you don't need to configure OCR blob paths like `ocr_blobs_path` or `language_classifier_blob_path` for MRZ.
-
-More information about the general handling of OCR blob files can be found here: https://github.com/doo/scanbot-sdk-example-android/wiki/OCR-document-scanning#preparing-the-data
-
-**Second**: Get `MRZScanner` instance from `ScanbotSDK` and attach it to `ScanbotCameraView`
+### Step 3 - Get `MRZScanner` instance from `ScanbotSDK` and attach it to `ScanbotCameraView`
 
     ScanbotSDK scanbotSDK = new ScanbotSDK(this);
     final MRZScanner mrzScanner = scanbotSDK.mrzScanner();
     MRZScannerFrameHandler mrzScannerFrameHandler = MRZScannerFrameHandler.attach(cameraView, mrzScanner);
 
-**Third**: Add result handler for `MRZScannerFrameHandler`:
+### Step 4 - Add result handler for `MRZScannerFrameHandler`
 
     mrzScannerFrameHandler.addResultHandler(new MRZScannerFrameHandler.ResultHandler() {
         @Override
@@ -70,7 +65,7 @@ As a result you will get `MRZRecognitionResult` object which contains all extrac
 You can now run your app and should see a simple camera preview which can scan MRZ data on your document.
 
 
-#### Finder Overlay
+### Adding a Finder Overlay
 
 In addition it is recommended to add a "Finder Overlay". This feature allows to predefine a MRZ area over the `ScanbotCameraView` screen. By using this overlay the MRZ scanner can skip the time-consuming step "Search for MRZ area" and perform the recognition directly in the specified "Finder Overlay" area. By using this approach the MRZ scanner recognizes and extracts the MRZ content much faster.
 
