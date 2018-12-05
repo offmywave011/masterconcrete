@@ -1,7 +1,5 @@
 The Scanbot SDK provides the ability to find and extract content from German **Disability Certificates** (DC) forms.
 
-#### Getting started
-
 Try our [DC Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/dc-scanner) or check the following step by step integration instructions.
 
 ### Step 1 - Add DC Feature as Dependency
