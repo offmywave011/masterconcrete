@@ -1,29 +1,41 @@
-Scanbot SDK provides ability to scan and extract content (like IBAN, BIC, receiver name, sender name, transfer amount, reference number) form SEPA pay forms.
+The Scanbot SDK provides the ability to scan and extract content from SEPA pay forms.
 
-#### Getting started
+Following fields are supported:
+- IBAN
+- BIC 
+- Transfer Amount 
+- Reference Number
+- Receiver Name
+- Sender name
+
+Try our [PayForm Scanner Example App](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/payform-scanner) or check the following step by step integration instructions.
+
+### Step 1 - Add PayForm Scanner Feature as Dependency
 
 `PayFormScanner` is available with the SDK Package 3. You have to add the following dependency for it:
 
-    compile "io.scanbot:sdk-package-3:$latestVersion"
+    api "io.scanbot:sdk-package-3:$latestVersion"
 
 It can be used in conjunction with `ScanbotCameraView` or separately. Let's have a look at example with `ScanbotCameraView`.
 
-To get started, you have to undertake few steps.
 
-**First**: Fetch english and german language OCR blobs, language detector blobs and banks data blob.
+### Step 2 - Prepare the OCR language blobs and PayForm specific blob files
+The PayForm Scanner is based on the OCR Feature of Scanbot SDK. Please check the [Optical Character Recognition] docs for more details.
 
-    Collection<Blob> blobs = blobFactory.ocrLanguageBlobs(Language.DEU);
-    blobs.addAll(blobFactory.ocrLanguageBlobs(Language.ENG));
-    blobs.addAll(blobFactory.languageDetectorBlobs());
-    blobs.add(blobFactory.bankDataBlob());
+In order to use the PayForm Scanner you need to prepare the German and English OCR language files as well as some internal PayForm Recognizer specific blob files. Place the `deu.traineddata` and `eng.traineddata` files in the assets sub-folder assets/ocr_blobs/ of your app.
 
-    for (Blob blob : blobs) {
-        blobManager.fetch(blob, false);
-    }
+Then on initialization of the SDK call the `prepareOCRLanguagesBlobs(true)`and the `preparePayFormBlobs(true)` methods:
+```
+import io.scanbot.sdk.ScanbotSDKInitializer;
 
-You can find more information about fetching and preparing the blobs here: https://github.com/doo/scanbot-sdk-example-android/wiki/OCR-document-scanning#preparing-the-data
+new ScanbotSDKInitializer()
+      .prepareOCRLanguagesBlobs(true)
+      .preparePayFormBlobs(true)
+      ...
+      .initialize(this);
+```
 
-**Second**: Get `PayFormScanner` instance from `ScanbotSDK` and attach it to `ScanbotCameraView`
+### Step 3 - Get `PayFormScanner` instance from `ScanbotSDK` and attach it to `ScanbotCameraView`
 
     ScanbotSDK scanbotSDK = new ScanbotSDK(this);
     final PayFormScanner payFormScanner = scanbotSDK.payFormScanner();
