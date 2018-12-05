@@ -1,4 +1,4 @@
-The Scanbot SDK provides ability to find and extract [Machine Readable Zone (MRZ)](https://en.wikipedia.org/wiki/Machine-readable_passport) content from ID cards, passports and travel documents.
+The Scanbot SDK provides the ability to find and extract [Machine Readable Zone (MRZ)](https://en.wikipedia.org/wiki/Machine-readable_passport) content from ID cards, passports and travel documents.
 
 Depending on the type of document following fields can be extracted:
 * document code
