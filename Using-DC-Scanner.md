@@ -29,8 +29,9 @@ Place the `eng.traineddata` file in the assets sub-folder `assets/ocr_blobs/` of
 
 Then on initialization of the SDK call the `prepareOCRLanguagesBlobs(true)` method:
 
-import io.scanbot.sdk.ScanbotSDKInitializer;
 ```
+import io.scanbot.sdk.ScanbotSDKInitializer;
+
 new ScanbotSDKInitializer()
       .prepareOCRLanguagesBlobs(true)
       ...
