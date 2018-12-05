@@ -19,7 +19,7 @@ It can be used in conjunction with `ScanbotCameraView` or separately. Let's have
 
 
 ### Step 2 - Prepare the OCR language blobs and PayForm specific blob files
-The PayForm Scanner is based on the OCR Feature of Scanbot SDK. Please check the [Optical Character Recognition] docs for more details.
+The PayForm Scanner is based on the OCR Feature of Scanbot SDK. Please check the [[Optical Character Recognition]] docs for more details.
 
 In order to use the PayForm Scanner you need to prepare the German and English OCR language files as well as some internal PayForm Recognizer specific blob files. Place the `deu.traineddata` and `eng.traineddata` files in the assets sub-folder assets/ocr_blobs/ of your app.
 
