@@ -17,7 +17,7 @@ The `ScanbotSDKInitializer` class provides the method `sdkFilesDirectory(Applica
 Example:
 ```
 import io.scanbot.sdk.ScanbotSDKInitializer;
-...
+
 // e.g. use a sub-folder in the external(!) storage.
 File customStorageDir = new File(getExternalFilesDir(null), "my-custom-storage-dir");
 customStorageDir.mkdirs();
