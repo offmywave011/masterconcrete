@@ -22,5 +22,5 @@ The following barcode formats are currently supported:
 ## Integration
 See our Example Apps how to integrate the barcode scanner.
 
-- Ready-To-Use UI: [ready-to-use-ui Example App](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/ready-to-use-ui)
-- Classical UI Components: [barcode-scanner Example App](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/barcode-scanner)
+- Ready-To-Use UI: [ready-to-use-ui Example App](https://github.com/doo/scanbot-sdk-example-android/tree/master/ready-to-use-ui-demo)
+- Classical UI Components: [barcode-scanner](https://github.com/doo/scanbot-sdk-example-android/tree/master/classical-components-demo/barcode-scanner)
