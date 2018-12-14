@@ -7,7 +7,7 @@ Following fields are supported:
 - Reference Number
 - Sender IBAN / Name
 
-Try our [PayForm Scanner Example App](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/payform-scanner) or check the following step by step integration instructions.
+Try our [PayForm Scanner Example App](https://github.com/doo/scanbot-sdk-example-android/tree/master/classical-components-demo/payform-scanner) or check the following step by step integration instructions.
 
 ### Step 1 - Add PayForm Scanner Feature as Dependency
 
