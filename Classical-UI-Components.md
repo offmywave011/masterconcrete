@@ -39,7 +39,7 @@ For example:
 ## Examples and Java Docs
 
 For more details about these components please check our Example Apps 
-- https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample
+- https://github.com/doo/scanbot-sdk-example-android/tree/master/classical-components-demo
 
 and Java API Docs: 
 - [API Docs (net.doo.snap, io.scanbot)](https://scanbotsdk.github.io/documentation/android/api/net.doo.snap/)
