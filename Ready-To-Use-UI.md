@@ -24,7 +24,7 @@ The RTU UI components are distributed as a separate package. Add it as dependenc
 
     compile "io.scanbot:sdk-package-ui:$latestVersion"
 
-Get the `$latestVersion` number from the [README](https://github.com/doo/Scanbot-SDK-Examples/blob/master/README.md)
+Get the `$latestVersion` number from the [[Release History]].
 
 ### Initialize SDK with RTU UI
 
@@ -47,8 +47,8 @@ public void onCreate() {
 
 ## Examples and Java Docs
 
-For more details about the RTU UI components please check our Example App `ready-to-use-ui`
-- https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/ready-to-use-ui
+For more details about the RTU UI Components please check our Example App `ready-to-use-ui-demo`:
+- https://github.com/doo/scanbot-sdk-example-android/tree/master/ready-to-use-ui-demo
 
 and Java API Docs: 
 - https://scanbotsdk.github.io/documentation/android/api/io.scanbot.sdk/
