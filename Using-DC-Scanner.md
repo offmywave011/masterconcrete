@@ -11,7 +11,7 @@ Following fields can be extracted:
   - Incapable Until (voraussichtlich arbeitsunfähig bis ...)
   - Diagnosed On (festgestellt am)
 
-Try our [DC Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/dc-scanner) or check the following step by step integration instructions.
+Try our [DC Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/classical-components-demo/dc-scanner) or check the following step by step integration instructions.
 
 ### Step 1 - Add DC Feature as Dependency
 `DCScanner` is available with the SDK Package 4. You have to add the following dependency for it:
