@@ -18,7 +18,7 @@ Depending on the type of document following fields can be extracted:
 * travel document type.
 
 
-Try our [MRZ Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/mrz-scanner) or check the following step by step integration instructions.
+Try our [MRZ Scanner Example Apps](https://github.com/doo/scanbot-sdk-example-android/tree/master/classical-components-demo/mrz-scanner) or check the following step by step integration instructions.
 
 ### Step 1 - Add MRZ Feature as Dependency
 `MRZScanner` is available with the SDK Package 3. You have to add the following dependency for it:
