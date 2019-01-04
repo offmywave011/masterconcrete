@@ -21,6 +21,9 @@ The current version of the SDK is **1.40.0**
   * Updated some third-party libs to the latest versions (e.g. Kotlin 1.3.0, etc).
   * Cleaned up some dependencies to avoid potential conflicts on implementation.
 
+##### 1.39.0
+- A special release for our customers who are not yet able to switch their projects to AndroidX. This version provides the same features, improvements and fixes as version 1.40.0, but **without AndroidX** dependencies.
+
 ##### 1.38.3
 - 🐞 Bug fixes: 
   * Small fixes in `MRZScanner` (improved detection on still images of some ID cards)
