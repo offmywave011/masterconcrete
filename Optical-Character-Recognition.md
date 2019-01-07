@@ -1,4 +1,4 @@
-Since version **1.40.0** the Scanbot SDK for Android provides a simple and convenient API ([`OpticalCharacterRecognizer`](https://scanbotsdk.github.io/documentation/android/api/io.scanbot.sdk/io/scanbot/sdk/ocr/OpticalCharacterRecognizer.html)) to run Optical Character Recognition (OCR) on images.
+Since version **1.39.0** the Scanbot SDK for Android provides a simple and convenient API ([`OpticalCharacterRecognizer`](https://scanbotsdk.github.io/documentation/android/api/io.scanbot.sdk/io/scanbot/sdk/ocr/OpticalCharacterRecognizer.html)) to run Optical Character Recognition (OCR) on images.
 As result you can get
 - a searchable PDF document with the recognized text layer (aka. sandwiched PDF document)
 - recognized text as plain text
