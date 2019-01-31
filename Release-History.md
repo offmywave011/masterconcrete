@@ -1,9 +1,21 @@
 ## What is the latest version of the Scanbot SDK for Android?
 
-The current version of the SDK is **1.40.0**
+The current version of the SDK is **1.41.0**
 
 
 ## Release History and Changelog
+
+##### 1.41.0
+- 🎉 NEW:
+  * Implemented new feature "Required Aspect Ratios" in **Classical Components** to restrict document detection to given aspect ratios
+      - Check out the example app [camera-view-aspect-ratio-finder](https://github.com/doo/scanbot-sdk-example-android/tree/master/classical-components-demo/camera-view-aspect-ratio-finder)
+  * Implemented new image filter types `IMAGE_FILTER_OTSU_BINARIZATION`, `IMAGE_FILTER_DEEP_BINARIZATION` and `IMAGE_FILTER_EDGE_HIGHLIGHT`
+
+- 🚀 Improvements:
+  * Improved recognition of pay cheques (`ChequeScanner`)
+
+- 🐞 Bug fixes:
+  * Various minor bug fixes and improvements
 
 ##### 1.40.0
 - 🎉 NEW:
