@@ -24,7 +24,7 @@ The current version of the SDK is **1.41.0**
   * OCR Recognizer/Renderer (`io.scanbot.sdk.ocr.OpticalCharacterRecognizer`) - A new simple and convenient API for OCR and PDF+OCR rendering. See the docs [[Optical Character Recognition]] for more details.
 
 - ⚠️ Breaking changes:
-  * AndroidX: Since AndroidX fully replaces the Android Support Libraries (`com.android.support.*`, etc), you will have to migrate your project. See ["Migrating to AndroidX"](https://developer.android.com/jetpack/androidx/migrate) for more details.
+  * **AndroidX**: Since AndroidX fully replaces the Android Support Libraries (`com.android.support.*`, etc), you will have to migrate your project to AndroidX. See ["Migrating to AndroidX"](https://developer.android.com/jetpack/androidx/migrate) for more details.
   * Internal Storage: The Scanbot SDK now uses the internal storage by default, which is more secure and do not require storage permission prompts. See the docs [[Storage]] for more details about the storage system. Please note: In case your app is using the storage for RTU UI Pages as permanent storage, make sure to implement a suitable migration (E.g. move the archived `Page` images from external storage folder to the new internal storage. Or alternatively overwrite the storage to the external folder again).
   * OCR blobs handling: A new mechanism and API to handle OCR language files as well as other blob files (MRZ blobs, etc) as assets. It replaces the obsolete mechanism based on `fetch()` methods (`blobManager.fetch(..)`). See the docs [[Optical Character Recognition]] for more details.
 
@@ -32,6 +32,9 @@ The current version of the SDK is **1.41.0**
   * Support for `RGBA_F16` Bitmaps (https://developer.android.com/reference/android/graphics/Bitmap.Config#RGBA_F16). Auto conversion to compatible Bitmaps.
   * Updated some third-party libs to the latest versions (e.g. Kotlin 1.3.0, etc).
   * Cleaned up some dependencies to avoid potential conflicts on implementation.
+
+##### 1.39.1
+- A special release for our customers who are not yet able to switch their projects to AndroidX. This version provides the same features, improvements and fixes as version 1.41.0, but **without AndroidX** dependencies.
 
 ##### 1.39.0
 - A special release for our customers who are not yet able to switch their projects to AndroidX. This version provides the same features, improvements and fixes as version 1.40.0, but **without AndroidX** dependencies.
