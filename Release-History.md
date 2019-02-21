@@ -68,13 +68,13 @@ The current version of the SDK is **1.41.0**
 ##### 1.36.0
 - 🚀 Improvements: 
   * MRZ Recognizer: improved detection on still images and parsing of some optional MRZ fields.
-  * Check out the updated [mrz-scanner](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/mrz-scanner) and [ready-to-use-ui](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/ready-to-use-ui) example apps.
+  * Check out the updated [mrz-scanner](https://github.com/doo/scanbot-sdk-example-android/tree/master/classical-components-demo/mrz-scanner) and [ready-to-use-ui-demo](https://github.com/doo/scanbot-sdk-example-android/tree/master/ready-to-use-ui-demo) example apps.
 - ⚠️ Breaking changes: 
   * All MRZ Scanner and Recognizer components (`MRZScanner`, `MRZScannerActivity`) now require an additional trained data blob file (MRZ cascade blob file `mrz.xml`), which is included in the SDK `io.scanbot:sdk-package-3` and can be fetched via `blobManager.fetch(blobFactory.mrzCascadeBlob(), false)`!
 
 ##### 1.35.0
 - 🎉 NEW: 
-  * Cheque Scanner - Real-time extraction of account & routing number (check out the [cheque-scanner](https://github.com/doo/scanbot-sdk-example-android/tree/master/ScanbotSDKexample/cheque-scanner) example app)
+  * Cheque Scanner - Real-time extraction of account & routing number (check out the [cheque-scanner](https://github.com/doo/scanbot-sdk-example-android/tree/master/classical-components-demo/cheque-scanner) example app)
   * Added a new config parameter `rotateButtonHidden` for the **RTU UI** `CroppingActivity`
 - ⚠️ Breaking change: Added file format extension (.jpg or .png) for **RTU UI** `Page` images: 
   * Affects the image files created by all **RTU UI** components, like `DocumentScannerActivity`, `CroppingActivity`, etc).
@@ -131,7 +131,7 @@ The current version of the SDK is **1.41.0**
 * 🎉 NEW! Added **Ready-To-Use UI** Components: `DocumentScannerActivity`, `CroppingActivity`, `MRZScannerActivity`, `BarcodeScannerActivity`. A set of easy to integrate and customize high-level UI components for the most common tasks in Scanbot SDK.
   * Published a new package `io.scanbot:sdk-package-ui` containing the new **Ready-To-Use UI** Components.
   * Added a new demo project `ready-to-use-ui` containing example code for the new **Ready-To-Use UI** Components.
-* Added a beautiful, animated ShutterButton component (`io.scanbot.sdk.ui.camera.ShutterButton`) which can also be used with our **Classical UI Components**. Check out the [camera-view](https://github.com/doo/Scanbot-SDK-Examples/tree/master/ScanbotSDKexample/camera-view) example app. 
+* Added a beautiful, animated ShutterButton component (`io.scanbot.sdk.ui.camera.ShutterButton`) which can also be used with our **Classical UI Components**. Check out the [camera-view](https://github.com/doo/scanbot-sdk-example-android/tree/master/classical-components-demo/camera-view) example app. 
 * Minor bug fixes and improvements.
 * Internal refactorings and improvements:
   * Deprecated some classes in the `net.doo.snap` Java package. Please use the equivalent classes from the new Java package `io.scanbot.sdk`. 
@@ -176,7 +176,7 @@ To customize the `MagnifierView` please use the attributes `magnifierImageSrc`, 
 * Fixed `DCScanner` bugs.
 
 ##### 1.27.1
-* Added `TIFFWRiter` feature to the Scanbot SDK package 1.
+* Added `TIFFWriter` feature to the Scanbot SDK package 1.
 * Added new "Pure Binarization" (`ContourDetector.IMAGE_FILTER_PURE_BINARIZED`) filter.
 * Added `DCScanner` recognition methods for `Bitmap`s and JPEG images.
 
