@@ -29,25 +29,41 @@ Or alternative for [Package II](https://scanbot.io/en/sdk.html#packages) feature
 
 Get the `$latestVersion` number from [[Release History]].
 
+## Enable multidex
+Make sure you have enabled [multidex](https://developer.android.com/studio/build/multidex) by setting `multiDexEnabled` to `true` in your module-level `build.gradle` file:
+
+```
+android {
+  ...
+  defaultConfig {
+    ...
+    multiDexEnabled true
+  }
+}
+```
+
 ## ABI settings
 The Scanbot SDK uses native libraries under the hood and supports following [ABIs](https://developer.android.com/ndk/guides/arch.html): `armeabi-v7a`, `arm64-v8a` and `x86`.
 
 Please check and adjust the `abiFilters` configuration in your `build.gradle` file accordingly:
 
-    android {
-      defaultConfig {
-        ndk {
-          abiFilters "armeabi-v7a", "arm64-v8a", "x86"
-        }
-      }
+```
+android {
+  ...
+  defaultConfig {
+    ...
+    ndk {
+      abiFilters "armeabi-v7a", "arm64-v8a", "x86"
     }
+  }
+}
+```
 
-**Please note:** 
 - `arm64-v8a`: Native libs for the `arm64-v8a` architecture are available since version **1.31.0** of Scanbot SDK. Previous versions of Scanbot SDK use `armeabi-v7a` libs since they are fully compatible with "arm64".
 
-- `x86`: Typically the `x86` architecture can be removed for the release (production) build, since it's used only on emulators. 
+- `x86`: In most cases the `x86` architecture can be removed for the release (production) build, since it's used on emulators and on some rare devices with the Intel Atom architecture.
 
-- `armeabi`: The `armeabi` architecture is no longer supported.
+If you need to support **all** architectures, we highly recommend to use the new [Android App Bundle](https://developer.android.com/platform/technology/app-bundle/) approach when it comes to publishing apps.
 
 
 ## Tuning the Android Manifest
