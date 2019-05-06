@@ -1,5 +1,6 @@
 * [[Getting started]]
 * [[Ready To Use UI]]
+    * [[Workflows]]
 * [[Classical UI Components]]
     * [[Using ScanbotCameraView]]
         * [[Detecting and drawing contours]]
