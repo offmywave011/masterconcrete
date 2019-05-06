@@ -19,8 +19,11 @@ api "io.scanbot:sdk-package-2:$latestVersion"
 
 
 ## Step 2 - Download and Provide OCR Language Files
-Please find a list of all supported OCR languages and download links on this [Tesseract wiki page](https://github.com/tesseract-ocr/tesseract/wiki/Data-Files#data-files-for-version-304305).
-The current Scanbot SDK supports `.traineddata` files of Tesseract version **3.04/3.05** only!
+You can find a list of all supported OCR languages and download links on this [Tesseract wiki page](https://github.com/tesseract-ocr/tesseract/wiki/Data-Files).
+
+⚠️ Please choose and download the proper version of the language data files:
+- For the latest version of Scanbot SDK **1.50.0 or newer** - [LSTM Data Files for Version **4.00**](https://github.com/tesseract-ocr/tesseract/wiki/Data-Files#updated-data-files-for-version-400-september-15-2017).
+- For the older versions of Scanbot SDK **<= 1.41.0** - [Data Files for Version **3.04/3.05**](https://github.com/tesseract-ocr/tesseract/wiki/Data-Files#data-files-for-version-304305).
 
 Download the files and place them in the assets sub-folder `assets/ocr_blobs/` of your app.
 Example:
