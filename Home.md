@@ -17,7 +17,7 @@ Operating system:
 
 Hardware:
 - Rear-facing camera with autofocus
-- Supported CPU/ABI architecture: `armeabi-v7`, `arm64-v8a`, `x86`
+- Supported CPU/ABI architecture: `armeabi-v7`, `arm64-v8a`, `x86`, `x86_64`
   (https://developer.android.com/ndk/guides/arch.html)
 
 Internet connection: 
