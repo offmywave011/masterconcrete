@@ -5,6 +5,7 @@ For example:
 - Document Scanning
   * `ScanbotCameraView`
   * `PolygonView`
+  * `ShutterButton`
   * `AutoSnappingController`
   * `ContourDetectorFrameHandler`
   * `ContourDetector`
