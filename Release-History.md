@@ -1,6 +1,6 @@
 ## What is the latest version of the Scanbot SDK for Android?
 
-The current version of the SDK is **1.50.0**
+The current version of the SDK is **1.52.0**
 
 
 ## Release History and Changelog
