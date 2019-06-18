@@ -5,6 +5,13 @@ The current version of the SDK is **1.50.0**
 
 ## Release History and Changelog
 
+### Version 1.52.0 (18 Jun 2019)
+- 🚀 Improvements:
+  * Removed dependencies to the deprecated library `net.doo:doo-datamining-tools-android`.
+- 🐞 Bug fixes:
+  * Removed permission `READ_PHONE_STATE` used in a sub library of the Scanbot SDK.
+
+
 ### Version 1.51.0 (6 Jun 2019)
 - 🎉 New:
   * Added a new config property in the RTU UI Document Scanner Component: `DocumentScannerConfiguration.setMaxNumberOfPages(number)` - Maximum number of pages to scan.
