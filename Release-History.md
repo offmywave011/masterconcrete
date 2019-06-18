@@ -70,6 +70,9 @@ The current version of the SDK is **1.52.0**
   * Updated some third-party libs to the latest versions (e.g. Kotlin 1.3.0, etc).
   * Cleaned up some dependencies to avoid potential conflicts on implementation.
 
+### Version 1.39.52 (18 Jun 2019)
+- A special release for our customers who are not yet able to switch their projects to AndroidX. This version provides the same features, improvements and fixes as version 1.52.0, but **without AndroidX** dependencies.
+
 ### Version 1.39.51 (6 Jun 2019)
 - A special release for our customers who are not yet able to switch their projects to AndroidX. This version provides the same features, improvements and fixes as version 1.51.0, but **without AndroidX** dependencies.
 
