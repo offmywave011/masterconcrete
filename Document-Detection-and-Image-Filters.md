@@ -34,3 +34,7 @@ Constants for supported image filters:
 * `ContourDetector.IMAGE_FILTER_PURE_BINARIZED` - A filter for binarizing an image. Creates an image with pixel values set to either pure black or pure white.
 * `ContourDetector.IMAGE_FILTER_BLACK_AND_WHITE` - Black and white filter with background cleaning. Creates a grayscaled 8-bit image with mostly black or white pixels.
 * `ContourDetector.IMAGE_FILTER_BACKGROUND_CLEAN` - Cleans up the background and tries to preserve photos within the image.
+* `ContourDetector.IMAGE_FILTER_OTSU_BINARIZATION` - A filter for black and white conversion using OTSU binarization.
+* `ContourDetector.IMAGE_FILTER_DEEP_BINARIZATION` - A filter for black and white conversion primary used for low-contrast documents.
+* `ContourDetector.IMAGE_FILTER_EDGE_HIGHLIGHT` - A filter that enhances edges in low-contrast documents.
+* `ContourDetector.IMAGE_FILTER_LOW_LIGHT_BINARIZATION` - Binarization filter primarily intended to use on low-contrast documents with hard shadows.
