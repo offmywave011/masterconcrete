@@ -25,7 +25,7 @@ The parameters are:
 
 The result `documentBitmap` is the cropped (and optionally filtered) document image.
 
-Constants for supported image filters:
+### Constants for supported image filters
 * `ContourDetector.IMAGE_FILTER_NONE` - Don't apply an image filter, keep original colors.
 * `ContourDetector.IMAGE_FILTER_COLOR_ENHANCED` - Optimizes colors, contrast and brightness.
 * `ContourDetector.IMAGE_FILTER_GRAY` - Grayscale filter.
