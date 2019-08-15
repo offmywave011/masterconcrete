@@ -1,9 +1,27 @@
 ## What is the latest version of the Scanbot SDK for Android?
 
-The current version of the SDK is **1.52.0**
+The current version of the SDK is **1.53.0**
 
 
 ## Release History and Changelog
+
+### Version 1.53.0 (15 Aug 2019)
+- 🎉 New:
+  * New recognizer for the European Health Insurance Cards (EHIC). 
+    Provides live detection and data extraction of all fields on the back of the card. 
+    Available as **Classical SDK Components** (`HealthInsuranceCardScanner`, `HealthInsuranceCardScannerFrameHandler`) as well as the **Ready-To-Use UI Component** (`HealthInsuranceCardScannerActivity`). 
+    See our updated example apps on GitHub for easy integration.
+  * New QR- & Barcode Scanner as **beta** feature which provides:
+    - better detection and extraction of 1D and 2D barcodes, especially Data Matrix and PDF 417 codes
+    - support for multiple barcode detection
+    - out-of-the-box parsers, like German Medical Plans (Medikationsplan) based on Data Matrix, ID Cards or US Driver Licenses (AAMVA format) both based on PDF 417.
+  * See the new example app [`beta-barcode-scanner`](https://github.com/doo/scanbot-sdk-example-android/tree/master/classical-components-demo/beta-barcode-scanner).
+  * Please note that this new QR- & Barcode Scanner component is a **BETA** feature and is still under active development and improvement. We will try to keep the API as stable as possible. However, please note that we can't guarantee that.
+- ⚠️ Breaking Changes:
+  * The API of the `BarcodeScanningResult` class has changed a little. It now contains multiple results as a list of `BarcodeItem`s.
+- 🐞 Bug fixes:
+  * Fixed camera issues on OnePlus 7 Pro devices.
+
 
 ### Version 1.52.0 (18 Jun 2019)
 - 🚀 Improvements:
