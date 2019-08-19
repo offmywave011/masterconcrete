@@ -1,9 +1,18 @@
 ## What is the latest version of the Scanbot SDK for Android?
 
-The current version of the SDK is **1.53.0**
+The current version of the SDK is **1.54.0**
 
 
 ## Release History and Changelog
+
+### Version 1.54.0 (19 Aug 2019)
+- 🐞 Bug fixes:
+  * Fixed OCR issues with some document images.
+  * Fixed sporadic crashes with some image filters, like `BACKGROUND_CLEAN`, `DEEP_BINARIZATION`, `LOW_LIGHT_BINARIZATION`, etc.
+  * Fixed finder view of the RTU UI EHIC Scanner (`HealthInsuranceCardScannerActivity`).
+- 🚙 Under the hood:
+  * Upgraded to OpenCV 3.4.7
+
 
 ### Version 1.53.0 (15 Aug 2019)
 - 🎉 New:
