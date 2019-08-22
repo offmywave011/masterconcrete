@@ -8,7 +8,7 @@ The current version of the SDK is **1.54.0**
 ### Version 1.54.0 (19 Aug 2019)
 - 🐞 Bug fixes:
   * Fixed OCR issues with some document images.
-  * Fixed crashes with some image filters, like `BACKGROUND_CLEAN`, `DEEP_BINARIZATION`, `LOW_LIGHT_BINARIZATION`, etc.
+  * Fixed crashes with some image filters, like `BACKGROUND_CLEAN`, `DEEP_BINARIZATION`, `LOW_LIGHT_BINARIZATION`, etc. on ARM 32-bit devices (`armeabi-v7`).
   * Fixed finder view of the RTU UI EHIC Scanner (`HealthInsuranceCardScannerActivity`).
 - 🚙 Under the hood:
   * Upgraded to OpenCV 3.4.7
@@ -99,8 +99,8 @@ The current version of the SDK is **1.54.0**
 
 ### Version 1.39.52.2 (22 Aug 2019)
 - A special release for our customers who are not yet able to switch their projects to AndroidX. This version provides the same features, improvements and fixes as version 1.52.0, but **without AndroidX** dependencies.
-- Fixed crashes with some image filters, like `BACKGROUND_CLEAN`, `DEEP_BINARIZATION`, `LOW_LIGHT_BINARIZATION`, etc.
-- ⚠️ Please note that this is the **last release version** which is based on the deprecated Android Support Libraries. We strongly recommend to migrate your project to AndroidX libs and upgrade to the latest version of the Scanbot SDK (see above) to benefit from the latest features, improvements, bug fixes, etc.
+- Fixed crashes with some image filters, like `BACKGROUND_CLEAN`, `DEEP_BINARIZATION`, `LOW_LIGHT_BINARIZATION`, etc. on ARM 32-bit devices (`armeabi-v7`).
+- ⚠️ Please note that this is the **last release version** which is based on the deprecated [Android Support Libraries](https://developer.android.com/topic/libraries/support-library). We strongly recommend to migrate your project to [AndroidX](https://developer.android.com/jetpack/androidx) libs and upgrade to the latest version of the Scanbot SDK (see above) to benefit from the latest features, improvements, bug fixes, etc.
 
 ### Version 1.39.52 (18 Jun 2019)
 - A special release for our customers who are not yet able to switch their projects to AndroidX. This version provides the same features, improvements and fixes as version 1.52.0, but **without AndroidX** dependencies.
