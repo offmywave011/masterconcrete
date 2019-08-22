@@ -8,7 +8,7 @@ The current version of the SDK is **1.54.0**
 ### Version 1.54.0 (19 Aug 2019)
 - 🐞 Bug fixes:
   * Fixed OCR issues with some document images.
-  * Fixed sporadic crashes with some image filters, like `BACKGROUND_CLEAN`, `DEEP_BINARIZATION`, `LOW_LIGHT_BINARIZATION`, etc.
+  * Fixed crashes with some image filters, like `BACKGROUND_CLEAN`, `DEEP_BINARIZATION`, `LOW_LIGHT_BINARIZATION`, etc.
   * Fixed finder view of the RTU UI EHIC Scanner (`HealthInsuranceCardScannerActivity`).
 - 🚙 Under the hood:
   * Upgraded to OpenCV 3.4.7
@@ -96,6 +96,11 @@ The current version of the SDK is **1.54.0**
   * Support for `RGBA_F16` Bitmaps (https://developer.android.com/reference/android/graphics/Bitmap.Config#RGBA_F16). Auto conversion to compatible Bitmaps.
   * Updated some third-party libs to the latest versions (e.g. Kotlin 1.3.0, etc).
   * Cleaned up some dependencies to avoid potential conflicts on implementation.
+
+### Version 1.39.52.2 (22 Aug 2019)
+- A special release for our customers who are not yet able to switch their projects to AndroidX. This version provides the same features, improvements and fixes as version 1.52.0, but **without AndroidX** dependencies.
+- Fixed crashes with some image filters, like `BACKGROUND_CLEAN`, `DEEP_BINARIZATION`, `LOW_LIGHT_BINARIZATION`, etc.
+- ⚠️ Please note that this is the **last release version** which is based on the deprecated Android Support Libraries. We strongly recommend to migrate your project to AndroidX libs and upgrade to the latest version of the Scanbot SDK (see above) to benefit from the latest features, improvements, bug fixes, etc.
 
 ### Version 1.39.52 (18 Jun 2019)
 - A special release for our customers who are not yet able to switch their projects to AndroidX. This version provides the same features, improvements and fixes as version 1.52.0, but **without AndroidX** dependencies.
