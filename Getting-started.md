@@ -21,13 +21,13 @@ Afterwards, you can add a dependency to your project:
 
 For [Package I](https://scanbot.io/en/sdk.html#packages) features:
 
-    compile "io.scanbot:sdk-package-1:$latestVersion"
+    implementation "io.scanbot:sdk-package-1:$scanbotSdkVersion"
 
 Or alternative for [Package II](https://scanbot.io/en/sdk.html#packages) features:
 
-    compile "io.scanbot:sdk-package-2:$latestVersion"
+    implementation "io.scanbot:sdk-package-2:$scanbotSdkVersion"
 
-Get the `$latestVersion` number from [[Release History]].
+Get the latest `$scanbotSdkVersion` from [[Release History]].
 
 ## Enable multidex
 Make sure you have enabled [multidex](https://developer.android.com/studio/build/multidex) by setting `multiDexEnabled` to `true` in your module-level `build.gradle` file:
