@@ -23,11 +23,15 @@ Afterwards, you can add a dependency to your project:
 
 For [Package I](https://scanbot.io/en/sdk.html#packages) features:
 
-    implementation "io.scanbot:sdk-package-1:$scanbotSdkVersion"
+```groovy
+implementation "io.scanbot:sdk-package-1:$scanbotSdkVersion"
+```
 
 Or alternative for [Package II](https://scanbot.io/en/sdk.html#packages) features:
 
-    implementation "io.scanbot:sdk-package-2:$scanbotSdkVersion"
+```groovy
+implementation "io.scanbot:sdk-package-2:$scanbotSdkVersion"
+```
 
 Get the latest `$scanbotSdkVersion` from [[Release History]].
 
@@ -35,7 +39,7 @@ Get the latest `$scanbotSdkVersion` from [[Release History]].
 ## Enable Multidex
 Make sure you have enabled [multidex](https://developer.android.com/studio/build/multidex) by setting `multiDexEnabled` to `true` in your **module-level** `build.gradle` file (e.g. `app/build.gradle`):
 
-```
+```groovy
 android {
   ...
   defaultConfig {
@@ -49,9 +53,9 @@ android {
 ## ABI Settings
 The Scanbot SDK uses native libraries under the hood and supports following [ABIs](https://developer.android.com/ndk/guides/arch.html): `armeabi-v7a`, `arm64-v8a`, `x86` and `x86_64`.
 
-Please check and adjust the `abiFilters` configuration in your `build.gradle` file accordingly:
+Please check and add/adjust the `abiFilters` configuration in your **module-level** `build.gradle` file accordingly:
 
-```
+```groovy
 android {
   ...
   defaultConfig {
