@@ -13,9 +13,12 @@ The Scanbot SDK package contains no language data files to keep the SDK small in
 
 ## Step 1 - Add OCR Feature as Dependency
 The OCR feature is provided in **Scanbot SDK Package II**. You have to add the corresponding dependency for Package II `io.scanbot:sdk-package-2` or higher in your `build.gradle`:
+
 ```
-api "io.scanbot:sdk-package-2:$latestVersion"
+implementation "io.scanbot:sdk-package-2:$scanbotSdkVersion"
 ```
+
+Get the latest `$scanbotSdkVersion` from [[Release History]].
 
 
 ## Step 2 - Download and Provide OCR Language Files
