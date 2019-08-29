@@ -1,21 +1,23 @@
-All of the following steps are assuming that you are using Gradle as a build tool. It is also possible to use it with Maven, but you should adjust the steps accordingly.
-
 ## Scanbot SDK Dependencies
 
-The Scanbot SDK for Android is distributed through our private repository which you should specify in your `build.gradle`:
+The Scanbot SDK for Android is distributed through our private Maven repository which you have specify in your **top-level** `build.gradle` file:
 
-    allprojects {
-        repositories {
-            jcenter()
+```groovy
+allprojects {
+    repositories {
+        google()
+        jcenter()
 
-            maven {
-                url 'https://nexus.scanbot.io/nexus/content/repositories/releases/'
-            }
-            maven {
-                url 'https://nexus.scanbot.io/nexus/content/repositories/snapshots/'
-            }
+        // Scanbot SDK maven repos:
+        maven {
+            url 'https://nexus.scanbot.io/nexus/content/repositories/releases/'
+        }
+        maven {
+            url 'https://nexus.scanbot.io/nexus/content/repositories/snapshots/'
         }
     }
+}
+```
 
 Afterwards, you can add a dependency to your project:
 
@@ -29,8 +31,9 @@ Or alternative for [Package II](https://scanbot.io/en/sdk.html#packages) feature
 
 Get the latest `$scanbotSdkVersion` from [[Release History]].
 
-## Enable multidex
-Make sure you have enabled [multidex](https://developer.android.com/studio/build/multidex) by setting `multiDexEnabled` to `true` in your module-level `build.gradle` file:
+
+## Enable Multidex
+Make sure you have enabled [multidex](https://developer.android.com/studio/build/multidex) by setting `multiDexEnabled` to `true` in your **module-level** `build.gradle` file (e.g. `app/build.gradle`):
 
 ```
 android {
@@ -42,7 +45,8 @@ android {
 }
 ```
 
-## ABI settings
+
+## ABI Settings
 The Scanbot SDK uses native libraries under the hood and supports following [ABIs](https://developer.android.com/ndk/guides/arch.html): `armeabi-v7a`, `arm64-v8a`, `x86` and `x86_64`.
 
 Please check and adjust the `abiFilters` configuration in your `build.gradle` file accordingly:
@@ -68,55 +72,97 @@ If you need to support **all** architectures, we highly recommend to use the new
 
 
 ## Tuning the Android Manifest
-Since your application works with images it is highly recommended to add the property `android:largeHeap="true"` in the `<application>` element of your `AndroidManifest.xml` file.
-Processing images is a memory intensive task and this property will ensure your app has enough heap allocated to avoid `OutOfMemoryError` exceptions.
 
-    <application
-      android:largeHeap="true"
-      ...
-    </application>
+### Camera Permission
+
+Declare that your app needs camera permission by listing the permission `android.permission.CAMERA` in the `AndroidManifest.xml` file:
+
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-feature android:name="android.hardware.camera" />
+```
+
+Since Android 6.0 (API level 23) you also have to implement a suitable permission requesting and handling **at runtime**. For more details please see the Android docs ["Request App Permissions"](https://developer.android.com/training/permissions/requesting) as well as our basic [example implementation](https://github.com/doo/scanbot-sdk-example-android/blob/master/classical-components-demo/camera-view/src/main/java/io/scanbot/example/MainActivity.java).
+
+
+### Memory Settings
+
+Since your application will work with high-resolution images it is strongly recommended to add the property `android:largeHeap="true"` in the `<application>` element of your `AndroidManifest.xml` file, especially for Android <= 7.x. Processing hi-res images is a memory intensive task and this property will ensure your app has enough heap allocated to avoid `OutOfMemoryError` exceptions.
+
+```xml
+<application android:largeHeap="true" ...>
+  ...
+</application>
+```
+
+👉 We also recommend to check out this article [Managing Bitmap Memory](https://developer.android.com/topic/performance/graphics/manage-memory) of the Android docs.
 
 
 ## Initialize SDK
 
 The Scanbot SDK must be initialized before usage. Add the following code snippets to your `Application` class:
 
-    import io.scanbot.sdk.ScanbotSDKInitializer;
+```java
+import io.scanbot.sdk.ScanbotSDKInitializer;
 
-    @Override
-    public void onCreate() {
-        new ScanbotSDKInitializer()
-          // .license(this, "YOUR_SCANBOT_SDK_LICENSE_KEY")
-          .initialize(this);
+@Override
+public void onCreate() {
+    new ScanbotSDKInitializer()
+      .license(this, LICENSE_KEY) // see below
+      .initialize(this);
 
-        super.onCreate();
-    }
+    super.onCreate();
+}
+```
 
 Please make sure to use the `ScanbotSDKInitializer` class from the new Java package `io.scanbot.sdk.` (`net.doo.snap.ScanbotSDKInitializer` is deprecated).
 
-## Add Scanbot SDK license
 
-Call `ScanbotSDKInitializer#license(application, "YOUR_SCANBOT_SDK_LICENSE_KEY")` method with the provided license key:
+## Add Scanbot SDK License Key
 
-    new ScanbotSDKInitializer()
-                .license(this, "YOUR_SCANBOT_SDK_LICENSE_KEY")
-                .initialize(this);
+Use the method `license(application, "YOUR_SCANBOT_SDK_LICENSE_KEY")` on initialization of the Scanbot SDK to set your license key:
 
-Please make sure that you have inserted the exact key as it is stated in the license file - with all line breaks.
+```java
+// This is an expired license key. Used only for demo code purposes!
+String LICENSE_KEY =
+    "MiKudIf/IFGnwk/0ZQAhx58IGEV8/L" +
+    "d6dF/F/j2TyLNNb+TCaIsQLOf2+/Ih" +
+    "LRRPvRsHESA/b0KFqnxYl4briv3kzQ" +
+    "tSTrvDJ9mE15rxU/Pob4XRnjTSc9B7" +
+    "P/CpM0HDkmM02U8ljt0kKwpQSRZkiz" +
+    "rBe+qttmA0b00ZEcyfn9t2xP4zRdaD" +
+    "ayjWAdZi82oP3UST3bLIV8I90Qordf" +
+    "s+u23JKL52bQY+HB1HNW7Ow8rA4+Mg" +
+    "Lr/wE2N+UBElHPOZLtQBTHYUvbVwVU" +
+    "KZDWOEv8VfrTmn2XA0tKVSDaxL6z7B" +
+    "1s2g83XWYaxXrf4A3q/fkSNvDN1oic" +
+    "Dvs0gbD1Lf0w==\nU2NhbmJvdFNESw" +
+    "ppby5zY2FuYm90LmV4YW1wbGUuc2Rr" +
+    "LmFuZHJvaWQKMTQ3ODA0NDc5OQoyCj" +
+    "I=\n";
 
-## License checks in production apps
+new ScanbotSDKInitializer()
+        .license(this, LICENSE_KEY)
+        .initialize(this);
+```
 
-Please note:
+Please make sure that you have inserted the exact key as it is stated in the license file - with all encoded line breaks `\n`.
 
-If your Scanbot SDK license has expired, any call of the Scanbot SDK API will terminate your app. To prevent this you should always check for license expiration during the runtime by calling the method `scanbotSDK.isLicenseValid()`. If this method returns `false`, you should disable any usage of the Scanbot SDK functions or UI components.
 
-We highly recommend to implement a suitable handling of this case in your app!
+## License Checks in Production Apps
+
+⚠️ If your Scanbot SDK license has expired, any call of the Scanbot SDK API will terminate your app. To prevent this you should always check for license expiration during the runtime by calling the method `scanbotSDK.isLicenseValid()`. If this method returns `false`, you should disable any usage of the Scanbot SDK (functions, UI components, etc).
+
+**We highly recommend to implement a suitable handling of this case in your app!**
 
 Example code for checking the license status:
 
-    import io.scanbot.sdk.ScanbotSDK;
+```java
+import io.scanbot.sdk.ScanbotSDK;
 
-    ScanbotSDK scanbotSDK = new ScanbotSDK(activity);
-    if(scanbotSDK.isLicenseValid()) {
-        // Making your call into ScanbotSDK API is safe now.
-    }
+ScanbotSDK scanbotSDK = new ScanbotSDK(activity);
+if (scanbotSDK.isLicenseValid()) {
+    // Making your call into ScanbotSDK API is safe now.
+    // e.g. startDocumentScanner() or doSomeScanbotImageOperation()
+}
+```
