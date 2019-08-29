@@ -16,7 +16,6 @@
 * [[Creating PDF Documents]]
 * [[Optical Character Recognition]]
 * [[Storage]]
-* [[Permissions]]
 * [[ProGuard]]
 * [[License handling]]
 * [[Pitfalls and issues]]
