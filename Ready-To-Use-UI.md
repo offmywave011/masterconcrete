@@ -22,9 +22,9 @@ If you need more customization options you have to implement custom Activities u
 
 The RTU UI components are distributed as a separate package. Add it as dependency to your project:
 
-    compile "io.scanbot:sdk-package-ui:$latestVersion"
+    implementation "io.scanbot:sdk-package-ui:$scanbotSdkVersion"
 
-Get the `$latestVersion` number from the [[Release History]].
+Get the latest `$scanbotSdkVersion` from the [[Release History]].
 
 ### Initialize SDK with RTU UI
 
