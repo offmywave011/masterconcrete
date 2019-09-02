@@ -1,6 +1,8 @@
 You have to add this ProGuard rules for all Scanbot SDK Packages:
 
 ```
+-ignorewarnings
+
 -keep public class net.doo.snap.ui.** { *; }
 
 -keep public class io.scanbot.sap.SapManager { *; }
